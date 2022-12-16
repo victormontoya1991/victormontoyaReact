@@ -1,14 +1,12 @@
-import './Navbar.scss'
-
-const mainLogo = require.contest('../../assets/img', true);
+import './Navbar.scss';
+import logoBrand from '../../assets/img/logo_web.png';
 
 export const NavBar = () => {
 
     return(
         <div>
-            <img src={ mainLogo (`./logo_web.png`)} />
-            <p>Este es un texto generico</p>
-            <hr/>
+            <img alt="Logo" src= { logoBrand }/> 
         </div>
+
     )
 }
