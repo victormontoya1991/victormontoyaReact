@@ -1,4 +1,6 @@
-import {NavBar} from './components/Navbar/Navbar.js'
+import {NavBar} from './components/Navbar/Navbar'
+
+import'./Apps.scss'
 
 function App() {
 
