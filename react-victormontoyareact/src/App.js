@@ -1,4 +1,4 @@
-import {NavBar} from './components/Navbar/Navbar'
+import { PageHeader } from './components/PageHeader/Pageheader';
 
 import'./Apps.scss'
 
@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div>
-      <NavBar />
+      <PageHeader />
 
     </div>
   );
