@@ -1,10 +1,10 @@
 import './Pageheader.scss';
 /*Llamado de componentes */
-import { NavBar } from '../Navbar/Navbar';
-import { CarWidget } from '../CarWidget/CarWidget';
-import { SearchWindow } from '../SearchWindow/SearchWindow'
+import { NavBar } from '../../molecules/Navbar/Navbar';
+import { CarWidget } from '../../molecules/CarWidget/CarWidget';
+import { SearchWindow } from '../../molecules/SearchWindow/SearchWindow'
 /*Llamado de imagenes*/
-import logoBrand from '../../assets/img/logo_web.png';
+import logoBrand from '../../../../assets/img/logo_web.png';
 
 export const PageHeader = () => {
     return(
