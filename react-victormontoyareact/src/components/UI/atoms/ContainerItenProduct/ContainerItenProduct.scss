@@ -1,0 +1,40 @@
+@import '../../../../color.scss';
+.ContainerItenProduct{
+    max-width: 500px;
+    display:grid;
+    justify-items: center;
+    align-content: center;
+    .ImgItenProduct img{
+        border-radius: 40px;
+    }
+    .TitleItenProduct{
+        margin: 10px 0 4px 0;
+    }
+    .PreciItenProduct{
+        margin: 0px;
+        font-size: 20px;
+    }
+    .CatItenProduct{
+        margin: 0px;
+        font-size: 12px;
+        color: $color5;
+    }
+    .ButtonItenProduct{
+        width: 40%;
+        max-width: 200px;
+        font-family: Poppins;
+        font-size:14px;
+        margin: 10px 0 0 0;
+        padding: 10px 0 10px 0;
+        border-radius: 15px;
+        background: none;
+        border: 1px solid $color1;
+        color: $color1;
+        &:hover{
+            font-weight: 500;
+            color: $color2;
+            background: $color3;
+            border: 1px solid $color3;
+        }
+    }
+}

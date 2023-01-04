@@ -1,3 +1,5 @@
+@import "../../color.scss";
+
 .callHome{
     display: flex;
     grid-gap: 30px;
@@ -5,14 +7,13 @@
     a{
         text-decoration: none;
         font-family: Poppins;
-        color: white;
+        color: $color1;
         font-size: 20px;
         font-weight:300;
-        
-    }
-    :hover{
-        color: #a9ff38;
-        text-shadow: 0 0 0.2em #a9ff3870, 0 0 0.2em #a9ff3883;
-        border-bottom: #a9ff38 solid 1px ;
+        &:hover{
+            color: $color3;
+            text-shadow: $hover;
+            border-bottom: $color3 solid 1px ;
+        }
     }
 }

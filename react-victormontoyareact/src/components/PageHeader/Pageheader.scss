@@ -1,3 +1,5 @@
+@import "../../color.scss";
+
 .pageHeader{
     display: grid;
     padding: 10px 50px;
@@ -16,7 +18,7 @@
         display: none;
         margin-top: 8px;
         font-size: 30px;
-        color: white;
+        color: $color1;
     }
     .logoBrand{
         display: flex;

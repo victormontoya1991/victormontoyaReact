@@ -1,0 +1,11 @@
+@import '../../../../color.scss';
+
+.ContainerListProducts{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: auto;
+    margin-bottom: 20px;
+    grid-gap: 50px;
+    padding: 5%;
+    color: $color1;
+}

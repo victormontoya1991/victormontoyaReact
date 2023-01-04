@@ -1,5 +1,6 @@
+import ItemListContainer from './components/UI/organisms/ItemListContainer/ItemListContainer';
+
 import { PageHeader } from './components/PageHeader/Pageheader';
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 
 import'./Apps.scss'
 

@@ -1,23 +1,25 @@
+@import '../../color.scss';
+
 .SearchWindow { 
     grid-area: SearchWindow; 
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 22px 0 22px 0;
-    border-top: solid 1px #ffffff14;
+    border-top: solid 1px $color6;
     input{
-        background: #555;
+        background: none;
         border: none;
         font-size: 16px;
         font-family: "Poppins", sans-serif;
-        color: white;
+        color: $color1;
         width: 100%;
         max-width: 500px;
         border-radius: 15px;
         outline: none;
         padding: 12px 14px;
         background: none;
-        border: 1px solid #E2E2E2;
+        border: 1px solid $color5;
         vertical-align: top;
     }
 }

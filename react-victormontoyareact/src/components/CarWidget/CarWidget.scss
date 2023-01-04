@@ -1,3 +1,5 @@
+@import "../../color.scss";
+
 .iconCar{
     display: flex;
     justify-content: flex-end;
@@ -11,7 +13,7 @@
         align-items: center;
         position: absolute;
         box-sizing: border-box;
-        background: rgb(255, 39, 39);
+        background: $color4;
         height: 20px;
         width: 20px;
         border-radius: 10px;
@@ -19,16 +21,16 @@
         p{
             font-family: Poppins;
             font-size: 10px;
-            color: white;
+            color: $color1;
         }
     }
     .material-icons{
         margin-top: 8px;
         font-size: 30px;
-        color: white;
-    }
-    :hover{
-        color: #a9ff38;
-        text-shadow: 0 0 0.2em #a9ff3870, 0 0 0.2em #a9ff3883;
+        color: $color1;
+        &:hover{
+            color: $color3;
+            text-shadow: $hover;
+        }
     }
 }
