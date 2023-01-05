@@ -1,11 +1,11 @@
 @import '../../../../color.scss';
 .ContainerItenProduct{
-    max-width: 500px;
+    max-width: 90%;
     display:grid;
     justify-items: center;
     align-content: center;
     .ImgItenProduct img{
-        border-radius: 40px;
+        border-radius: 50px;
     }
     .TitleItenProduct{
         margin: 10px 0 4px 0;
