@@ -4,7 +4,7 @@ import './ContainerListProducts.scss'
 const ContainerListProducts = ({products}) => {
     return(
         <div className='ContainerListProducts'>
-            { products.map ((produc) => <ContainerItenProduct key={produc.id} produc ={produc}/>)}
+            { products.map ((produc) => <ContainerItenProduct key={produc.id} {...produc}/>)}
         </div>
     )
 }

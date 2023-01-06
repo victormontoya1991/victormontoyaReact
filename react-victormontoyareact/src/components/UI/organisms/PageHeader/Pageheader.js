@@ -1,5 +1,6 @@
 import './Pageheader.scss';
 /*Llamado de componentes */
+import { Link } from 'react-router-dom'
 import { NavBar } from '../../molecules/Navbar/Navbar';
 import { CarWidget } from '../../molecules/CarWidget/CarWidget';
 import { SearchWindow } from '../../molecules/SearchWindow/SearchWindow'
@@ -10,9 +11,9 @@ export const PageHeader = () => {
     return(
         <header className="pageHeader">
             <span className="material-icons hamburguesaMenu md-70">menu</span>
-            <div className="logoBrand" >
+            <Link className="logoBrand"  to="/" >
                 <img alt="Logo" src= { logoBrand }/> 
-            </div>
+            </Link>
             <NavBar />
             <CarWidget />
             <SearchWindow />

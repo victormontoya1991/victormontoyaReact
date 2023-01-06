@@ -1,14 +1,14 @@
 import'./ContainerItenProduct.scss'
 
-const ContainerItenProduct = ( {produc}) => {
+const ContainerItenProduct = ( {name, image, category, price, id }) => {
     return(
-        <div className='ContainerItenProduct'>
+        <div className='ContainerItenProduct' id={id}>
             <div className='ImgItenProduct'>
-                <img alt="{produc.name}" src={produc.image} />
+                <img alt="{name}" src={image} />
             </div>
-            <h4 className='TitleItenProduct'>{produc.name}</h4>
-            <p className='CatItenProduct'>Categoria: {produc.category}</p>
-            <p className='PreciItenProduct'>${produc.price}</p>
+            <h4 className='TitleItenProduct'>{name}</h4>
+            <p className='CatItenProduct'>Categoria: {category}</p>
+            <p className='PreciItenProduct'>${price}</p>
             <button className='ButtonItenProduct'>Ver Más</button>
         </div>
     )
