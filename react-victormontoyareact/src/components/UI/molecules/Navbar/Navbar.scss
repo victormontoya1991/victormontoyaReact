@@ -1,4 +1,4 @@
-@import "../../../../color.scss";
+@import "../../../../constant.scss";
 
 .callHome{
     display: flex;
@@ -7,17 +7,15 @@
     align-items: center;
     a{
         text-decoration: none;
-        font-family: Poppins;
+        font-family: $font;
         color: $color1;
-        font-size: 14px;
+        font-size: $fontSize ;
         font-weight:300;
         &:hover{
-            font-size: 16px;
+            font-size: $fontSizeH;
             color: $color3;
             text-shadow: $hover;
-            transition-property: all;
-            transition-duration: 0.2s;
-            transition-timing-function: linear;
+            @extend %transition1
         }
     }
 }

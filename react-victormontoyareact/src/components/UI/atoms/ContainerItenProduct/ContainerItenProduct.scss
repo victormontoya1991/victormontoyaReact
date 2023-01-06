@@ -1,4 +1,5 @@
-@import '../../../../color.scss';
+@import '../../../../constant.scss';
+
 .ContainerItenProduct{
     max-width: 90%;
     display:grid;
@@ -6,13 +7,16 @@
     align-content: center;
     .ImgItenProduct img{
         border-radius: 50px;
+        @extend %hover1
     }
     .TitleItenProduct{
         margin: 10px 0 4px 0;
     }
     .PreciItenProduct{
+        color:$color3;
         margin: 0px;
         font-size: 20px;
+        font-weight: 600;
     }
     .CatItenProduct{
         margin: 0px;
@@ -22,19 +26,22 @@
     .ButtonItenProduct{
         width: 40%;
         max-width: 200px;
-        font-family: Poppins;
-        font-size:14px;
+        font-family: $font;
+        font-size: $fontSize;
         margin: 10px 0 0 0;
         padding: 10px 0 10px 0;
         border-radius: 15px;
         background: none;
-        border: 1px solid $color1;
+        border: 2px solid $color1;
         color: $color1;
         &:hover{
             font-weight: 500;
             color: $color2;
             background: $color3;
-            border: 1px solid $color3;
+            border: 2px solid $color3;
+            @extend %transition1;
+            @extend %hover1
         }
     }
+    
 }

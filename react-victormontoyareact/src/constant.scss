@@ -1,0 +1,32 @@
+/* Color Theme*/
+
+$color1: white ;
+$color2: #202020;
+$color3: #a9ff38;
+$color4:rgb(255, 39, 39);
+$color5: grey;
+$color6: #ffffff14;
+$hover: 0 0 0.2em #a9ff3870, 0 0 0.2em #a9ff3883;
+
+/*Fuente */
+
+$font: 'Poppins', sans-serif;
+$fontSize:14px;
+$fontSizeH: 16px;
+
+/* Badgraud */
+
+
+/* Transition */
+
+%transition1{
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+%hover1{
+    &:hover{
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.692);
+    }
+}
