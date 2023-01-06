@@ -1,8 +1,8 @@
-
+import './contact.scss'
 
 export const PageContact = () => {
     return(
-        <div>
+        <div className="MainContact">
             <h1> Funciona</h1>
         </div>
     )

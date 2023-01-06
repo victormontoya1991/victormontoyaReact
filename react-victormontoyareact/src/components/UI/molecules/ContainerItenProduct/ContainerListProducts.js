@@ -3,7 +3,7 @@ import './ContainerListProducts.scss'
 
 const ContainerListProducts = ({products}) => {
     return(
-        <div className='ContainerListProducts'>
+        <div className='PageListProducts'>
             { products.map ((produc) => <ContainerItenProduct key={produc.id} {...produc}/>)}
         </div>
     )

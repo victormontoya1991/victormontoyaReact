@@ -4,16 +4,20 @@
     display: flex;
     grid-gap: 30px;
     justify-content: center;
+    align-items: center;
     a{
         text-decoration: none;
         font-family: Poppins;
         color: $color1;
-        font-size: 20px;
+        font-size: 14px;
         font-weight:300;
         &:hover{
+            font-size: 16px;
             color: $color3;
             text-shadow: $hover;
-            border-bottom: $color3 solid 1px ;
+            transition-property: all;
+            transition-duration: 0.2s;
+            transition-timing-function: linear;
         }
     }
 }

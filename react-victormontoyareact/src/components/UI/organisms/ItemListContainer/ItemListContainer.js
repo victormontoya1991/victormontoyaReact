@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import './ItemListContainer'
 import { dataRequest } from '../../../../helpers/dataRequest'
 import { useEffect, useState } from 'react'
 import ContainerListProducts from '../../molecules/ContainerItenProduct/ContainerListProducts'
@@ -18,7 +20,7 @@ const ItemListContainer = () => {
             .catch((err)=>{
                 console.log(err)
             })
-    },[])
+    },[categoryId])
 
     return (
         <div>

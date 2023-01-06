@@ -9,14 +9,16 @@ import logoBrand from '../../../../assets/img/logo_web.png';
 
 export const PageHeader = () => {
     return(
-        <header className="pageHeader">
-            <span className="material-icons hamburguesaMenu md-70">menu</span>
-            <Link className="logoBrand"  to="/" >
-                <img alt="Logo" src= { logoBrand }/> 
-            </Link>
-            <NavBar />
-            <CarWidget />
-            <SearchWindow />
+        <header>
+            <div className="pageHeader">
+                <span className="material-icons hamburguesaMenu md-70">menu</span>
+                <Link className="logoBrand"  to="/" >
+                    <img alt="Logo" src= { logoBrand }/> 
+                </Link>
+                <NavBar />
+                <CarWidget />
+                <SearchWindow />
+            </div>
         </header>
     )
 }
