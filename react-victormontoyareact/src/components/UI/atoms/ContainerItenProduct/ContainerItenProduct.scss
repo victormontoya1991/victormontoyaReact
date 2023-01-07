@@ -5,9 +5,24 @@
     display:grid;
     justify-items: center;
     align-content: center;
-    .ImgItenProduct img{
-        border-radius: 50px;
-        @extend %hover1
+    .ImgItenProduct{
+        .IconFavorite{
+            position:absolute;
+            .material-icons{
+                margin-top: -10px;
+                margin-left: -10px;
+                padding: 15px;
+                border-radius:50%;
+                @extend %glass;
+                &:hover{
+                    @extend %glassH;
+                }
+            }
+        }
+        img{
+            border-radius: 60px;
+            @extend %hover1
+        }
     }
     .TitleItenProduct{
         margin: 10px 0 4px 0;
@@ -40,7 +55,8 @@
             background: $color3;
             border: 2px solid $color3;
             @extend %transition1;
-            @extend %hover1
+            @extend %hover1;
+            box-shadow: $hover;
         }
     }
     

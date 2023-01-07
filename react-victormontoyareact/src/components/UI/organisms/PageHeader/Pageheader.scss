@@ -14,10 +14,7 @@ header{
         grid-template-areas: 
             "logoBrand callHome CarWidget"
             "SearchWindow SearchWindow SearchWindow";
-        background: rgba(32, 32, 32, 0.7);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        @extend %glass;
         .hamburguesaMenu{
             display: none;
             margin-top: 8px;

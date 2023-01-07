@@ -30,3 +30,17 @@ $fontSizeH: 16px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.692);
     }
 }
+
+%glass{
+    background: rgba(32, 32, 32, 0.7);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+%glassH{
+    background: #a9ff3860;
+    box-shadow: 0 4px 30px #a9ff3859;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
