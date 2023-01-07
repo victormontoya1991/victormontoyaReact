@@ -7,6 +7,11 @@ $color4:rgb(255, 39, 39);
 $color5: grey;
 $color6: #ffffff14;
 $hover: 0 0 0.2em #a9ff3870, 0 0 0.2em #a9ff3883;
+%hover1{
+    &:hover{
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.692);
+    }
+}
 
 /*Fuente */
 
@@ -15,22 +20,6 @@ $fontSize:14px;
 $fontSizeH: 16px;
 
 /* Badgraud */
-
-
-/* Transition */
-
-%transition1{
-    transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-}
-
-%hover1{
-    &:hover{
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.692);
-    }
-}
-
 %glass{
     background: rgba(32, 32, 32, 0.7);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -44,3 +33,13 @@ $fontSizeH: 16px;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 }
+
+/* Transition */
+
+%transition1{
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+

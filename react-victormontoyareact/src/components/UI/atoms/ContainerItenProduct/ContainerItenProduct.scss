@@ -16,6 +16,7 @@
                 @extend %glass;
                 &:hover{
                     @extend %glassH;
+                    @extend %transition1;
                 }
             }
         }
