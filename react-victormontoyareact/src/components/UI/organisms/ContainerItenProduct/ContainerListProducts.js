@@ -1,4 +1,4 @@
-import ContainerItenProduct from '../../atoms/ContainerItenProduct/ContainerItenProduct'
+import ContainerItenProduct from '../../molecules/ContainerItenProduct/ContainerItenProduct'
 import './ContainerListProducts.scss'
 
 const ContainerListProducts = ({products}) => {

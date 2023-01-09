@@ -2,7 +2,7 @@
 import './ItemListContainer'
 import { dataRequest } from '../../../../helpers/dataRequest'
 import { useEffect, useState } from 'react'
-import ContainerListProducts from '../../molecules/ContainerItenProduct/ContainerListProducts'
+import ContainerListProducts from '../../../UI/organisms/ContainerItenProduct/ContainerListProducts'
 import { useParams } from 'react-router-dom'
 
 const ItemListContainer = () => {

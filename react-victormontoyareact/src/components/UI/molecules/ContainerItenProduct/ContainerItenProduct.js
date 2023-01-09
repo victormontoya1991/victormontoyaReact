@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import'./ContainerItenProduct.scss'
 
 const ContainerItenProduct = ( {name, image, category, price, id }) => {
@@ -12,7 +13,7 @@ const ContainerItenProduct = ( {name, image, category, price, id }) => {
             <h4 className='TitleItenProduct'>{name}</h4>
             <p className='CatItenProduct'>Categoria: {category}</p>
             <p className='PreciItenProduct'>${price}</p>
-            <button className='ButtonItenProduct'>Ver Más</button>
+            <Link className='ButtonItenProduct' to={`/products/${id}`}>Ver Más</Link>
         </div>
     )
 }

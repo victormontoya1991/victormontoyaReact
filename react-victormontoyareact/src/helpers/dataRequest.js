@@ -7,3 +7,12 @@ export const dataRequest = () => {
         },500)
     })
 }
+
+export const dataRequestId = (id) => {
+    return new Promise ((resolve, reject)=>{
+        setTimeout(()=> {
+            const itemId = MOCK_DATA.find ((el) => el.id === id)
+            resolve(itemId)
+        },500)
+    })
+}
