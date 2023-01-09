@@ -1,23 +1,28 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { dataRequestId } from "../../../../helpers/dataRequest"
+import ContainerDetail from "../../../UI/organisms/ContainerDetail/ContainerDetail"
 
-export const ItemDetailContainer =({idProduct}) => {
-    const [itemId, setItemId]= useState (null)
-    const { dataId } = useParams ()
 
-    console.log (dataId)
+const ItemDetailContainer =() => {
+    const [product, setItemId]= useState (null)
+    const { producId } = useParams ()
+    console.log (producId)
 
     useEffect(()=>{
-        dataRequestId(idProduct)
-            .then ((dataId) =>{
-                setItemId(dataId)
+        dataRequestId( Number(producId))
+            .then ((data) =>{
+                setItemId(data)
             })
-    }, [idProduct])
+    }, [producId])
 
     return (
         <div>
-            Hola
+            {
+                product && <ContainerDetail {...product}/>
+            }
         </div>
     )
 }
+
+export default ItemDetailContainer

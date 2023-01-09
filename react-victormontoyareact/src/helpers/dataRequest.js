@@ -11,8 +11,14 @@ export const dataRequest = () => {
 export const dataRequestId = (id) => {
     return new Promise ((resolve, reject)=>{
         setTimeout(()=> {
-            const itemId = MOCK_DATA.find ((el) => el.id === id)
-            resolve(itemId)
+            const product = MOCK_DATA.find ((el) => el.id === id)
+            if (product){
+                resolve(product)
+            }else{
+                reject({
+                    error:'Producto no existe'
+                })
+            }
         },500)
     })
 }

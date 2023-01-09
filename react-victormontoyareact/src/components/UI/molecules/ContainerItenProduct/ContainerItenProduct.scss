@@ -6,20 +6,6 @@
     justify-items: center;
     align-content: center;
     .ImgItenProduct{
-        .IconFavorite{
-            position:absolute;
-            .material-icons{
-                margin-top: -10px;
-                margin-left: -10px;
-                padding: 15px;
-                border-radius:50%;
-                @extend %glass;
-                &:hover{
-                    @extend %glassH;
-                    @extend %transition1;
-                }
-            }
-        }
         img{
             border-radius: 60px;
             @extend %hover1
