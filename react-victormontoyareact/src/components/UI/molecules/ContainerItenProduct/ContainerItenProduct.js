@@ -4,7 +4,7 @@ import'./ContainerItenProduct.scss'
 
 const ContainerItenProduct = ( {name, image, category, price, id }) => {
     return(
-        <div className='ContainerItenProduct' id={id}>
+        <div className='ContainerItenProduct'>
             <div className='ImgItenProduct'>
                 <ButtonLike />
                 <img alt="{name}" src={image} />

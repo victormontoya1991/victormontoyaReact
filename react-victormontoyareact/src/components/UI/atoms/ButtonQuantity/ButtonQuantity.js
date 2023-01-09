@@ -1,8 +1,8 @@
-import './ButtonCar.scss';
+import './ButtonQuantity.scss';
 import { useState } from 'react';
 
 
-export const ButtonCard = () => {
+export const ButtonQuantity = () => {
     const [counter, setCounter] = useState(0)
     const more = () => {
         setCounter( counter + 1 )
@@ -14,11 +14,9 @@ export const ButtonCard = () => {
     }
     return (
         <div>
-            <h2>Button Card</h2>
-            <hr/>
-            <button className="ButtonMore" onClick={more}> + </button>
             <button className="ButtonMinus" onClick={minus}> - </button>
-            <p>{counter}</p>
+            <p className="Quantity">{counter}</p>
+            <button className="ButtonMore" onClick={more}> + </button>
         </div>
     )
 }

@@ -1,13 +1,49 @@
 @import "../../../../constant.scss";
 
-.ContainerDetail{
+.ContainerProduct{
     display:grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas: auto;
     margin-bottom: 20px;
     grid-gap: 50px;
-    padding: 300px 5%;
+    padding: 250px 5%;
     color: $color1;
-    justify-items: center;
     color: $color1;
+    grid-template-areas: 
+        "HeaderProduct HeaderProduct"
+        "PintureProduct ContectsProduct";
+    .HeaderProduct{ 
+        grid-area: HeaderProduct;
+        display: flex;
+        justify-content: space-between;
+    }
+    .PintureProduct{ grid-area: PintureProduct;}
+    .ContectsProduct{ 
+        grid-area: ContectsProduct;
+        .ButtonCar{
+            display: grid;
+            width: 40%;
+            max-width: 200px;
+            font-family: $font;
+            font-size: $fontSize;
+            margin: 10px 0 0 0;
+            padding: 10px 0 10px 0;
+            border-radius: 15px;
+            background: none;
+            border: 2px solid $color1;
+            color: $color1;
+            text-decoration: none;
+            justify-items: center;
+            align-items: center;
+            &:hover{
+                font-weight: 500;
+                color: $color2;
+                background: $color3;
+                border: 2px solid $color3;
+                @extend %transition1;
+                @extend %hover1;
+                box-shadow: $hover;
+            }
+        }
+    }
 }
