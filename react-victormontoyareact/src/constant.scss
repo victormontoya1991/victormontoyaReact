@@ -34,6 +34,13 @@ $fontSizeH: 16px;
     -webkit-backdrop-filter: blur(20px);
 }
 
+%glassB{
+    background: #ffffff60;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: $color1; 
+}
+
 /* Transition */
 
 %transition1{

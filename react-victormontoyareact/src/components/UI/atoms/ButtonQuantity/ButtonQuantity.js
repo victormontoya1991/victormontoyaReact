@@ -13,10 +13,19 @@ export const ButtonQuantity = () => {
         }
     }
     return (
-        <div>
-            <button className="ButtonMinus" onClick={minus}> - </button>
-            <p className="Quantity">{counter}</p>
-            <button className="ButtonMore" onClick={more}> + </button>
+        <div className='NubQuantity'>
+            <section className='TitleQuantity' >
+                <h6>Quantity:</h6>
+            </section>
+            <section className='ButtonQuantity'>
+                <button className="ButtonMinus" onClick={minus}>
+                    <span className="material-icons md-70">remove</span>
+                </button>
+                <p className="Quantity">{counter}</p>
+                <button className="ButtonMore" onClick={more}>
+                    <span className="material-icons md-70">add</span>
+                </button>
+            </section>
         </div>
     )
 }

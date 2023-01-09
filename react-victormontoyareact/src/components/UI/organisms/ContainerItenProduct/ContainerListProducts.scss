@@ -9,4 +9,22 @@
     padding: 300px 5%;
     color: $color1;
     justify-items: center;
+    @extend %transition1;
+}
+
+/*------------------------------------------------*/
+/*Media Queris*/
+/*------------------------------------------------*/
+@media all and (max-width:1500px){
+    .PageListProducts{
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px;
+    }
+}
+
+@media all and (max-width:980px){
+    .PageListProducts{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
 }

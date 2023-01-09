@@ -3,11 +3,9 @@
 .ContainerProduct{
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: auto;
     margin-bottom: 20px;
     grid-gap: 50px;
     padding: 250px 5%;
-    color: $color1;
     color: $color1;
     grid-template-areas: 
         "HeaderProduct HeaderProduct"
@@ -16,10 +14,51 @@
         grid-area: HeaderProduct;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        .MigasProduct{
+            color: $color5;
+            a{
+                text-decoration: none;
+                color: $color5;
+                &:hover{
+                    color: $color3;
+                }
+            }
+        }
     }
-    .PintureProduct{ grid-area: PintureProduct;}
+    .PintureProduct{
+        grid-area: PintureProduct;
+        img{
+            border-radius: 70px;
+            width: auto;
+            max-height:90vh;
+        }
+    }
     .ContectsProduct{ 
         grid-area: ContectsProduct;
+        display: grid;
+        justify-items: center;
+        grid-gap: 20px;
+        .TitleProduct{
+            margin: 0px;
+            color:$color1;
+            font-size:45px;
+            font-weight: 600;
+        }
+        .ItemStock{
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            .Stock{
+                display: flex;
+                align-items: center;
+            }
+        }
+        .PreciProduct{
+            font-size: 45px;
+            color: $color3;
+            font-weight:700;
+        }
         .ButtonCar{
             display: grid;
             width: 40%;
@@ -29,20 +68,19 @@
             margin: 10px 0 0 0;
             padding: 10px 0 10px 0;
             border-radius: 15px;
-            background: none;
-            border: 2px solid $color1;
+            @extend %glass;
             color: $color1;
+            border: 2px solid $color1;
             text-decoration: none;
             justify-items: center;
             align-items: center;
             &:hover{
                 font-weight: 500;
-                color: $color2;
-                background: $color3;
                 border: 2px solid $color3;
+                color: $color2 ;
                 @extend %transition1;
-                @extend %hover1;
-                box-shadow: $hover;
+                @extend %glassH;
+                background: #a9ff38;
             }
         }
     }

@@ -7,6 +7,8 @@ export const ButtonReturn = () => {
         navigate(-1)
     }
     return (
-        <button onClick={handleReturn}> X </button>
+        <button className='IconRetur' onClick={handleReturn}> 
+            <span className="material-icons md-70">close</span>
+        </button>
     )
 }
