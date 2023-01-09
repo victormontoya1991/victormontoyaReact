@@ -26,6 +26,7 @@
         color: $color5;
     }
     .ButtonItenProduct{
+        display: grid;
         width: 40%;
         max-width: 200px;
         font-family: $font;
@@ -36,6 +37,9 @@
         background: none;
         border: 2px solid $color1;
         color: $color1;
+        text-decoration: none;
+        justify-items: center;
+        align-items: center;
         &:hover{
             font-weight: 500;
             color: $color2;
@@ -46,5 +50,4 @@
             box-shadow: $hover;
         }
     }
-    
 }
