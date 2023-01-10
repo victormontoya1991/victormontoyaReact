@@ -5,7 +5,7 @@
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 20px;
     grid-gap: 50px;
-    padding: 250px 5%;
+    padding: 250px 10%;
     color: $color1;
     grid-template-areas: 
         "HeaderProduct HeaderProduct"
@@ -28,10 +28,13 @@
     }
     .PintureProduct{
         grid-area: PintureProduct;
-        img{
-            border-radius: 70px;
-            width: auto;
-            max-height:90vh;
+        display: grid;
+        .PintureImg{
+            img{
+                border-radius: 70px;
+                width: auto;
+                max-height:90vh;
+            }
         }
     }
     .ContectsProduct{ 
@@ -45,19 +48,44 @@
             font-size:45px;
             font-weight: 600;
         }
+        .DescriptionProduct{
+            .TitleDProduct{
+                color: $color5;
+            }
+            .Description{
+                text-align: justify;
+                color: $color1;
+                font-size: 14px;
+            }
+        }
         .ItemStock{
             width: 60%;
             display: grid;
+            grid-gap: 20px;
             grid-template-columns: repeat(2,1fr);
             .Stock{
                 display: flex;
                 align-items: center;
+                justify-items: center;
+                justify-content: center;
+                .TitleStock{
+                    color: $color5;
+                    margin-right: 20px;
+                }
+                .NumbStock{
+                    color: $color3;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
             }
         }
         .PreciProduct{
             font-size: 45px;
             color: $color3;
             font-weight:700;
+            p{
+                margin: 0px;
+            }
         }
         .ButtonCar{
             display: grid;
@@ -81,6 +109,61 @@
                 @extend %transition1;
                 @extend %glassH;
                 background: #a9ff38;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------*/
+/*Media Queris*/
+/*------------------------------------------------*/
+@media all and (max-width:1300px){
+    .ContainerProduct{
+        padding: 250px 5%;
+    }
+}
+@media all and (max-width:1200px){
+    .ContainerProduct{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "HeaderProduct"
+        "PintureProduct"
+        "ContectsProduct";
+        .PintureProduct{
+            display: grid;
+            justify-items: center;
+            .PintureImg{
+                
+                img{
+                    border-radius: 50px;
+                    width: auto;
+                    max-width: 100%;
+                }
+                
+            }
+        }
+    }
+}
+@media all and (max-width:600px){
+    .ContainerProduct{
+        .ContectsProduct{ 
+            grid-gap: 0px;
+            .TitleProduct{
+                font-size:30px;
+            }
+            .DescriptionProduct{
+                .Description{
+                    text-align: justify;
+                    font-size: 12px;
+                }
+            }
+            .ItemStock{
+                width: 60%;
+                grid-gap: 10px;
+                grid-template-columns: 1fr;
+            }
+            .ButtonCar{
+                width: 90%;
             }
         }
     }

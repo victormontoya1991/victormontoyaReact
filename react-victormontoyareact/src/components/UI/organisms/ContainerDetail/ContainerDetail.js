@@ -15,19 +15,21 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
                 <ButtonReturn />
             </section>
             <section className='PintureProduct'>
-                <ButtonLike />
-                <img alt="{name}" src={image}/>
+                <article className='PintureImg'>
+                    <ButtonLike />
+                    <img alt="{name}" src={image}/>
+                </article>
             </section>
             <section className='ContectsProduct'>
                     <h2 className='TitleProduct'>{name}</h2>
-                    <article>
-                        <h6>Descripcion:</h6>
-                        <p>{description}</p>
+                    <article className='DescriptionProduct'>
+                        <h6 className='TitleDProduct'>Descripción:</h6>
+                        <p className='Description'>{description}</p>
                     </article>
                     <article className='ItemStock'>
                         <article className='Stock'>
-                            <h6>Disponible:</h6>
-                            <p>{stock}</p>
+                            <h6 className='TitleStock'>Disponible:</h6>
+                            <p className='NumbStock'>{stock}</p>
                         </article>
                         <ButtonQuantity />
                     </article>
