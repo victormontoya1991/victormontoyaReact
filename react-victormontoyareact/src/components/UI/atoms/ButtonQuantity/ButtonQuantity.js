@@ -15,7 +15,7 @@ export const ButtonQuantity = () => {
     return (
         <div className='NubQuantity'>
             <section className='TitleQuantity' >
-                <h6>Quantity:</h6>
+                <h6>Cantidad:</h6>
             </section>
             <section className='ButtonQuantity'>
                 <button className="ButtonMinus" onClick={minus}>

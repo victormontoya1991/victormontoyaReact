@@ -8,7 +8,7 @@
     .ImgItenProduct{
         img{
             border-radius: 60px;
-            @extend %hover1
+            @extend %hover1;
         }
     }
     .TitleItenProduct{

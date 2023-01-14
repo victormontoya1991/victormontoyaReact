@@ -7,7 +7,7 @@ const ContainerItenProduct = ( {name, image, category, price, id }) => {
         <div className='ContainerItenProduct'>
             <div className='ImgItenProduct'>
                 <ButtonLike />
-                <img alt="{name}" src={image} />
+                <img className='ImgProuc' alt="{name}" src={image} />
             </div>
             <h4 className='TitleItenProduct'>{name}</h4>
             <p className='CatItenProduct'>Categoria: {category}</p>

@@ -11,11 +11,14 @@
     .ButtonQuantity{
         display: flex;
         justify-items: center;
-        align-items: center;
+        max-height: 40px;
+        min-width: 120px;
+        border: 1px solid $color5;
+        border-radius: 20px;
+        justify-content: space-between;
         .ButtonMinus{
-            padding: 5px;
-            border: 1px solid $color1;
-            border-radius: 35% 0 0 35%;
+            border-radius: 22px;
+            border: none;
             @extend %glassB; 
             &:hover{
                 color: $color2 ;
@@ -26,15 +29,14 @@
             }          
         }
         .Quantity{
-            padding: 6px 20px 6px 20px;
-            border-top: 1px solid $color1;
+            display: grid;
             font-weight: 600;
-            border-bottom: 1px solid $color1;
+            font-size: 18px;
+            align-content: center;
         }
         .ButtonMore{
-            padding: 5px;
-            border: 1px solid $color1;
-            border-radius: 0 35% 35% 0;
+            border-radius: 22px;
+            border: none;
             @extend %glassB; 
             &:hover{
                 color: $color2 ;
