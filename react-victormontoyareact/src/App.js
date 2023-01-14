@@ -1,6 +1,6 @@
 import ItemListContainer from './components/page/category/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/page/product/ItemDetailContainer/ItemDetailContainer';
-import { PageHeader } from './components/UI/organisms/PageHeader/Pageheader';
+import { NavBar} from './components/UI/organisms/NavBar/NavBar';
 import { PageContact } from './components/page/contact/contact';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import'./Apps.scss'
@@ -8,7 +8,7 @@ import'./Apps.scss'
 function App() {
   return (
     <BrowserRouter>
-      <PageHeader />
+      <NavBar />
       <Routes>
         <Route path="/" element={ <ItemListContainer /> }/>
         <Route path="/category/:categoryId" element={ <ItemListContainer /> }/>

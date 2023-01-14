@@ -1,0 +1,17 @@
+@import "../../../../constant.scss";
+
+header{
+    .logoBrand{
+        display: flex;
+        img{
+            min-width: 120px;
+            max-width: 150px;
+        }
+    }
+}
+
+@media screen and (max-width: 850px){
+    .logoBrand{
+            justify-content: center;
+    }
+}

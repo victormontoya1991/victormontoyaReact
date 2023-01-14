@@ -1,21 +1,17 @@
-import './Pageheader.scss';
+import './NavBar.scss';
 /*Llamado de componentes */
-import { Link } from 'react-router-dom'
-import { NavBar } from '../../molecules/Navbar/Navbar';
+import { MenuBar } from '../../molecules/MenuBar/MenuBar';
 import { CarWidget } from '../../molecules/CarWidget/CarWidget';
 import { SearchWindow } from '../../molecules/SearchWindow/SearchWindow'
-/*Llamado de imagenes*/
-import logoBrand from '../../../../assets/img/logo_web.png';
+import { LogoBrand } from '../../atoms/LogoBrand/LogoBrand';
 
-export const PageHeader = () => {
+export const NavBar = () => {
     return(
         <header>
             <div className="pageHeader">
                 <span className="material-icons hamburguesaMenu md-70">menu</span>
-                <Link className="logoBrand"  to="/" >
-                    <img alt="Logo" src= { logoBrand }/> 
-                </Link>
-                <NavBar />
+                <LogoBrand />
+                <MenuBar />
                 <CarWidget />
                 <SearchWindow />
             </div>

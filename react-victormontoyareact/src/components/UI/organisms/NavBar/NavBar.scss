@@ -21,13 +21,6 @@ header{
             font-size: 30px;
             color: $color1;
         }
-        .logoBrand{
-            display: flex;
-            img{
-                min-width: 120px;
-                max-width: 150px;
-            }
-        }
     }
 }
 @media screen and (max-width: 850px){
@@ -41,9 +34,6 @@ header{
             }
             .callHome{
                 display: none;
-            }
-            .logoBrand{
-                justify-content: center;
             }
         }
     }

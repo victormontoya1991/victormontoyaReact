@@ -1,7 +1,7 @@
-import './Navbar.scss';
+import './MenuBar.scss';
 import { Link } from 'react-router-dom'
 
-export const NavBar = () => {
+export const MenuBar = () => {
     return(
         <nav className="callHome">
             <Link to="/">Home</Link>
