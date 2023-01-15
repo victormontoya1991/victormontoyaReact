@@ -1,0 +1,14 @@
+@import "../../../../constant.scss";
+
+.hamburguesaMenu{
+    display: none;
+    margin-top: 8px;
+    font-size: 30px;
+    color: $color1;
+}
+
+@media screen and (max-width: 850px){
+    .hamburguesaMenu{
+        display: flex;
+    }
+}

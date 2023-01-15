@@ -15,12 +15,6 @@ header{
             "logoBrand callHome CarWidget"
             "SearchWindow SearchWindow SearchWindow";
         @extend %glass;
-        .hamburguesaMenu{
-            display: none;
-            margin-top: 8px;
-            font-size: 30px;
-            color: $color1;
-        }
     }
 }
 @media screen and (max-width: 850px){
@@ -29,9 +23,6 @@ header{
             grid-template-areas: 
             "hamburguesaMenu logoBrand CarWidget"
             "SearchWindow SearchWindow SearchWindow";
-            .hamburguesaMenu{
-                display: flex;
-            }
             .callHome{
                 display: none;
             }
