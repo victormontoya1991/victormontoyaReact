@@ -1,0 +1,172 @@
+/* Color Theme*/
+/*Fuente */
+/* Badgraud */
+.ContainerProduct .ContectsProduct .ButtonCar {
+  background: rgba(32, 32, 32, 0.7);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.ContainerProduct .ContectsProduct .ButtonCar:hover {
+  background: rgba(169, 255, 56, 0.3764705882);
+  box-shadow: 0 4px 30px rgba(169, 255, 56, 0.3490196078);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Transition */
+.ContainerProduct .ContectsProduct .ButtonCar:hover {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
+.ContainerProduct {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 20px;
+  grid-gap: 50px;
+  padding: 250px 10%;
+  color: white;
+  grid-template-areas: "HeaderProduct HeaderProduct" "PintureProduct ContectsProduct";
+}
+.ContainerProduct .HeaderProduct {
+  grid-area: HeaderProduct;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ContainerProduct .HeaderProduct .MigasProduct {
+  color: grey;
+}
+.ContainerProduct .HeaderProduct .MigasProduct a {
+  text-decoration: none;
+  color: grey;
+}
+.ContainerProduct .HeaderProduct .MigasProduct a:hover {
+  color: #a9ff38;
+}
+.ContainerProduct .PintureProduct {
+  grid-area: PintureProduct;
+  display: grid;
+}
+.ContainerProduct .PintureProduct .PintureImg img {
+  border-radius: 70px;
+  width: auto;
+  max-height: 90vh;
+}
+.ContainerProduct .ContectsProduct {
+  grid-area: ContectsProduct;
+  display: grid;
+  justify-items: center;
+  grid-gap: 20px;
+}
+.ContainerProduct .ContectsProduct .TitleProduct {
+  margin: 0px;
+  color: white;
+  font-size: 45px;
+  font-weight: 600;
+}
+.ContainerProduct .ContectsProduct .DescriptionProduct .TitleDProduct {
+  color: grey;
+}
+.ContainerProduct .ContectsProduct .DescriptionProduct .Description {
+  text-align: justify;
+  color: white;
+  font-size: 14px;
+}
+.ContainerProduct .ContectsProduct .ItemStock {
+  width: 60%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.ContainerProduct .ContectsProduct .ItemStock .Stock {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+.ContainerProduct .ContectsProduct .ItemStock .Stock .TitleStock {
+  color: grey;
+  margin-left: 20px;
+}
+.ContainerProduct .ContectsProduct .ItemStock .Stock .NumbStock {
+  color: #a9ff38;
+  font-size: 18px;
+  font-weight: 600;
+}
+.ContainerProduct .ContectsProduct .PreciProduct {
+  font-size: 45px;
+  color: #a9ff38;
+  font-weight: 700;
+}
+.ContainerProduct .ContectsProduct .PreciProduct p {
+  margin: 0px;
+}
+.ContainerProduct .ContectsProduct .ButtonCar {
+  display: grid;
+  width: 40%;
+  max-width: 200px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  margin: 10px 0 0 0;
+  padding: 10px 0 10px 0;
+  border-radius: 15px;
+  color: white;
+  border: 2px solid white;
+  text-decoration: none;
+  justify-items: center;
+  align-items: center;
+}
+.ContainerProduct .ContectsProduct .ButtonCar:hover {
+  font-weight: 500;
+  border: 2px solid #a9ff38;
+  color: #202020;
+  background: #a9ff38;
+}
+
+/*------------------------------------------------*/
+/*Media Queris*/
+/*------------------------------------------------*/
+@media all and (max-width: 1300px) {
+  .ContainerProduct {
+    padding: 250px 5%;
+  }
+}
+@media all and (max-width: 1200px) {
+  .ContainerProduct {
+    grid-template-columns: 1fr;
+    grid-template-areas: "HeaderProduct" "PintureProduct" "ContectsProduct";
+  }
+  .ContainerProduct .PintureProduct {
+    display: grid;
+    justify-items: center;
+  }
+  .ContainerProduct .PintureProduct .PintureImg img {
+    border-radius: 50px;
+    width: auto;
+    max-width: 100%;
+  }
+}
+@media all and (max-width: 600px) {
+  .ContainerProduct .ContectsProduct {
+    grid-gap: 0px;
+  }
+  .ContainerProduct .ContectsProduct .TitleProduct {
+    font-size: 30px;
+  }
+  .ContainerProduct .ContectsProduct .DescriptionProduct .Description {
+    text-align: justify;
+    font-size: 12px;
+  }
+  .ContainerProduct .ContectsProduct .ItemStock {
+    width: 60%;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+  }
+  .ContainerProduct .ContectsProduct .ButtonCar {
+    width: 90%;
+  }
+}/*# sourceMappingURL=ContainerDetail.css.map */

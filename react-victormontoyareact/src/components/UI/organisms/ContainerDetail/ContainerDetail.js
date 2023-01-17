@@ -28,8 +28,8 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
                     </article>
                     <article className='ItemStock'>
                         <article className='Stock'>
-                            <h6 className='TitleStock'>Disponible:</h6>
                             <p className='NumbStock'>{stock}</p>
+                            <h6 className='TitleStock'>Disponibles</h6>
                         </article>
                         <ButtonQuantity />
                     </article>
