@@ -1,0 +1,15 @@
+@import '../../../constant.scss';
+.MainContact{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: $color1;
+    padding-top: 250px;
+    .contact{
+        color: $color2;
+        input{
+            font-family: $font;
+            font-size: 18px;
+        }
+    }
+}
