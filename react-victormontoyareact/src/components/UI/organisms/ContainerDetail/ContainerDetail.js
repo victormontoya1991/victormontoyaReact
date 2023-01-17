@@ -1,4 +1,5 @@
 
+import { useState } from 'react'
 import { ButtonReturn } from '../../atoms/ButtonReturn/ButtonReturn'
 import { ButtonQuantity } from '../../atoms/ButtonQuantity/ButtonQuantity'
 import './ContainerDetail.scss'
@@ -6,6 +7,22 @@ import { Link } from 'react-router-dom'
 import { ButtonLike } from '../../atoms/ButtoLike/ButtonLike'
 
 const ContainerDetail = ({id, name, image, description, price, category, stock}) => {
+    const [counter, setCounter] = useState (1)
+
+
+    // const handleCar = () => {
+    //     console.log({
+    //         id,
+    //         name,
+    //         stock,
+    //         category,
+    //         image,
+    //         description,
+    //         price,
+    //         counter
+    //     })
+    // }
+
     return(
         <div className="ContainerProduct" id={id}>
             <section className='HeaderProduct'>
@@ -31,12 +48,16 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
                             <p className='NumbStock'>{stock}</p>
                             <h6 className='TitleStock'>Disponibles</h6>
                         </article>
-                        <ButtonQuantity />
+                        <ButtonQuantity 
+                            max = {stock} 
+                            setCounter = {setCounter}
+                            counter = {counter}
+                        />
                     </article>
                     <article className='PreciProduct'>
                         <p>${price}</p>
                     </article>
-                    <button className='ButtonCar'>Agregar Carrito</button>
+                    <button className='ButtonCar' >Agregar Carrito</button>
             </section>
         </div>
     )
