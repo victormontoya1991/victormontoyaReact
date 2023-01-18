@@ -10,7 +10,6 @@ export const MenuBar = () => {
             <Link to="/category/Rodilleras">Rodilleras</Link>
             <Link to="/category/Pantalones">Pantalones</Link>
             <Link to="/contact">Contacto</Link>
-            <Link to="/car">Carrito</Link>
         </nav>
     )
 }
