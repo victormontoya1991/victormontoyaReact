@@ -1,6 +1,6 @@
 import './ButtonQuantity.scss';
 
-export const ButtonQuantity = ({counter, setCounter, max}) => {
+export const ButtonQuantity = ({counter, setCounter, max, onAdd}) => {
 
     const handleMore = () => {
         counter < max && setCounter( counter + 1 )
@@ -22,6 +22,7 @@ export const ButtonQuantity = ({counter, setCounter, max}) => {
                     <span className="material-icons md-70">add</span>
                 </button>
             </section>
+            <button className='ButtonCar' onClick={onAdd} >Agregar Carrito</button>
         </div>
     )
 }

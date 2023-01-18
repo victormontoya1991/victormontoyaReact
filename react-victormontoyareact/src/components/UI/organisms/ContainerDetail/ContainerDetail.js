@@ -1,27 +1,28 @@
 
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { ButtonReturn } from '../../atoms/ButtonReturn/ButtonReturn'
 import { ButtonQuantity } from '../../atoms/ButtonQuantity/ButtonQuantity'
 import './ContainerDetail.scss'
 import { Link } from 'react-router-dom'
 import { ButtonLike } from '../../atoms/ButtoLike/ButtonLike'
+import { CarContext } from '../../../../context/CarContext'
 
 const ContainerDetail = ({id, name, image, description, price, category, stock}) => {
+    const{ addCar,isInCar } = useContext (CarContext)
     const [counter, setCounter] = useState (1)
-
-
-    // const handleCar = () => {
-    //     console.log({
-    //         id,
-    //         name,
-    //         stock,
-    //         category,
-    //         image,
-    //         description,
-    //         price,
-    //         counter
-    //     })
-    // }
+    const handleCar = () => {
+        const itemCar = {
+            id,
+            name,
+            stock,
+            category,
+            image,
+            description,
+            price,
+            counter
+        }
+        addCar (itemCar)
+    }
 
     return(
         <div className="ContainerProduct" id={id}>
@@ -43,21 +44,27 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
                         <h6 className='TitleDProduct'>Descripción:</h6>
                         <p className='Description'>{description}</p>
                     </article>
+                    <article className='PreciProduct'>
+                        <p>${price}</p>
+                    </article>
                     <article className='ItemStock'>
                         <article className='Stock'>
                             <p className='NumbStock'>{stock}</p>
                             <h6 className='TitleStock'>Disponibles</h6>
                         </article>
+                        {
+                            !isInCar(id)
+                                ? <div></div>
+                                : <Link to="/car"> Ir Carrito </Link>
+
+                        }
                         <ButtonQuantity 
                             max = {stock} 
                             setCounter = {setCounter}
                             counter = {counter}
+                            onAdd={handleCar}
                         />
                     </article>
-                    <article className='PreciProduct'>
-                        <p>${price}</p>
-                    </article>
-                    <button className='ButtonCar' >Agregar Carrito</button>
             </section>
         </div>
     )

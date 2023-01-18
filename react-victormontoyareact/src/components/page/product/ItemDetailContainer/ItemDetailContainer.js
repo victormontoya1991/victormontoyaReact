@@ -7,7 +7,6 @@ import ContainerDetail from "../../../UI/organisms/ContainerDetail/ContainerDeta
 const ItemDetailContainer =() => {
     const [product, setItemId]= useState (null)
     const { producId } = useParams ()
-    console.log (producId)
 
     useEffect(()=>{
         dataRequestId( Number(producId))

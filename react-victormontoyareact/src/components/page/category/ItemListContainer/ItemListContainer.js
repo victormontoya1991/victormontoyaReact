@@ -18,7 +18,7 @@ const ItemListContainer = () => {
                 }
             })
             .catch((err)=>{
-                console.log(err)
+                <h1> Err Data Conect </h1>
             })
     },[categoryId])
 
