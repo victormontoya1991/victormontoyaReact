@@ -1,14 +1,61 @@
 @import "../../../../constant.scss";
 
-.hamburguesaMenu{
+.HamburguesaMenu{
     display: none;
     margin-top: 8px;
-    font-size: 30px;
+    font-size: 20px;
     color: $color1;
+    .material-icons{
+        z-index: 150;
+        align-self: start;
+        color: $color1;
+        margin-top: -10px;
+        margin-left: -10px;
+        padding: 15px;
+        border-radius:40%;
+        @extend %glass;
+        &:hover{
+            color: $color2 ;
+            @extend %transition1;
+            @extend %glassH;
+            background: #a9ff38;
+        }
+        &:active{
+            color: $color2 ;
+            @extend %transition1;
+            @extend %glassH;
+            background: #a9ff38;
+        }
+    }
+    .WindonsMenu{
+        margin: -40px -50px;
+        position: fixed;
+        width: 100%;
+        z-index: 120;
+        display: grid;
+        height: 100vh;
+        background: $color2;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        a{ 
+            color: $color1;
+            text-decoration: none;
+            text-align: center;
+            padding: 10px;
+            @extend %transition1;
+            &:hover{
+                @extend %transition1;
+                font-size: 30px;
+                color: #a9ff38;
+                text-shadow: $hover;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 850px){
-    .hamburguesaMenu{
+    .HamburguesaMenu{
         display: flex;
     }
 }

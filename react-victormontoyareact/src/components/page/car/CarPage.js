@@ -4,7 +4,7 @@ import './CarPage.scss'
 
 
 const CarPage = () => {
-    const {car} = useContext(CarContext)
+    const {car} = useContext( CarContext )
     return ( 
         <div className="CarPage">
             <section className="TitleCar">

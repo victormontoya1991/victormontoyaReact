@@ -15,7 +15,7 @@ function App() {
     setCar([...car, itemCar])
   }
   const isInCar = (id) => {
-    return car.some(itemcar => itemcar.id === id)
+    return car.some(itemCar => itemCar.id === id)
   }
   return (
     <CarContext.Provider value={{car,addCar,isInCar}}>
