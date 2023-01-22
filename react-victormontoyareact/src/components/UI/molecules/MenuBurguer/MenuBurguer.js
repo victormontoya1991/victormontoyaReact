@@ -8,7 +8,7 @@ export const MenuBurguer = () => {
     const open = () => { setShow ( !show )}
     return(
         <div className='HamburguesaMenu'>
-            <span onClick={open} className="material-icons hamburguesaMenu md-70">{show ? 'close' : ' menu '} </span>
+            <span onClick={open} className="material-icons hamburguesaMenu md-70">{show ? 'close' : ' menu '}</span>
             {show && 
                 <div className='WindonsMenu'>
                     <Link onClick={open} to="/">Home</Link>

@@ -20,12 +20,12 @@
             @extend %glassH;
             background: #a9ff38;
         }
-        &:active{
-            color: $color2 ;
-            @extend %transition1;
-            @extend %glassH;
-            background: #a9ff38;
-        }
+        // &:active{
+        //     color: $color2 ;
+        //     @extend %transition1;
+        //     @extend %glassH;
+        //     background: #a9ff38;
+        // }
     }
     .WindonsMenu{
         margin: -40px -50px;
