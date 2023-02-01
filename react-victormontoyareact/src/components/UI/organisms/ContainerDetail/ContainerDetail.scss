@@ -66,6 +66,32 @@
                 margin: 0px;
             }
         }
+        .ItemStock{
+            .ContaineShot{
+                min-height: 50px;
+            }
+            .ButtonC{
+                margin-top: 20px;
+                display: grid;
+                font-family: $font;
+                font-size: $fontSize;
+                padding: 15px 0 15px 0;
+                border-radius: 15px;
+                background: #ba80fd;
+                color: $color2;
+                border: 2px solid #ba80fd;
+                text-decoration: none;
+                justify-items: center;
+                align-items: center;
+                font-weight: 600;
+                &:hover{
+                    border: 2px solid $color1;
+                    @extend %transition1;
+                    @extend %glass;
+                    background: $color1;
+                }
+            }
+        }
     }
 }
 
@@ -101,6 +127,7 @@
 }
 @media all and (max-width:600px){
     .ContainerProduct{
+        grid-gap: 10px;
         .ContectsProduct{ 
             grid-gap: 0px;
             .TitleProduct{
@@ -113,7 +140,7 @@
                 }
             }
             .ItemStock{
-                width: 60%;
+                width: 90%;
                 grid-gap: 10px;
                 grid-template-columns: 1fr;
             }

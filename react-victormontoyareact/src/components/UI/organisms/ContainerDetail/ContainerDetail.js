@@ -31,7 +31,7 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
     const regreCounter = maxCounter.map(regre)
     const stockAc = stock-regreCounter
     return(
-        <div className="ContainerProduct" id={id}>
+        <div className='ContainerProduct' id={id}>
             <section className='HeaderProduct'>
                 <article className='MigasProduct'>
                     <Link to={`/`}>Productos</Link> / <Link to={`/category/${category}`}>{category}</Link>
@@ -56,7 +56,7 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
                     <article className='ItemStock'>
                         {
                             (stockAc<=0)
-                                ? <section className="ContaineShot"> chao</section>
+                                ? <section className='ContaineShot'> chao</section>
                                 : <ButtonQuantity 
                                     stockAc = {stockAc}
                                     max = {stock-regreCounter}
@@ -68,7 +68,7 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
                         {
                             !isInCar(id)
                                 ? null
-                                : <Link to="/car"> Ir Carrito </Link>
+                                : <Link className='ButtonC' to="/car"> Ir Carrito </Link>
                         }
                     </article>
             </section>
