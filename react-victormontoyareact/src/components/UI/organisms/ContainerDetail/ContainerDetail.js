@@ -23,7 +23,7 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
         }
         addCar (itemCar)
     }
-
+    
     return(
         <div className="ContainerProduct" id={id}>
             <section className='HeaderProduct'>
@@ -54,7 +54,7 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
                         </article>
                         {
                             !isInCar(id)
-                                ? <div></div>
+                                ? null
                                 : <Link to="/car"> Ir Carrito </Link>
 
                         }

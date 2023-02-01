@@ -4,7 +4,7 @@ import './CarPage.scss'
 
 
 const CarPage = () => {
-    const {car} = useContext( CarContext )
+    const {mycar} = useContext( CarContext )
     return ( 
         <div className="CarPage">
             <section className="TitleCar">
@@ -12,7 +12,7 @@ const CarPage = () => {
             </section>
             <section>
                 {
-                    car.map(itemCar => (
+                    mycar.map(itemCar => (
                         <div key={itemCar.id}>
                             <img src={itemCar.image} alt={itemCar.name} />
                             <h6>{itemCar.name}</h6>

@@ -10,15 +10,33 @@ import { useState } from 'react';
 import CarPage from './components/page/car/CarPage';
 
 function App() {
+  // Context Car
   const [car,setCar] = useState ([])
   const addCar = (itemCar) => {
     setCar([...car, itemCar])
   }
+  // Filter Car ++conter
+  const mycar = car.reduce((accumulator, counterCurrent) => {
+    const idExists = accumulator.find(element => element.id === counterCurrent.id);
+    if (idExists) {
+      return accumulator.map((element) => {
+        if(element.id === counterCurrent.id) {
+          return {
+            ...element,
+            counter: element.counter + counterCurrent.counter
+          }
+        }
+        return element;
+      });
+    }
+    return [...accumulator, counterCurrent];
+  }, []);
+  // Filter Data Context
   const isInCar = (id) => {
     return car.some(itemCar => itemCar.id === id)
   }
   return (
-    <CarContext.Provider value={{car,addCar,isInCar}}>
+    <CarContext.Provider value={{car,addCar,isInCar,mycar}}>
       <BrowserRouter>
         <NavBar />
         <Routes>
