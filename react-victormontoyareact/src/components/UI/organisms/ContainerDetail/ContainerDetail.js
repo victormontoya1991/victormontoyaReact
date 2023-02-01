@@ -54,18 +54,9 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
                         <p>${price}</p>
                     </article>
                     <article className='ItemStock'>
-                        <article className='Stock'>
-                            <p className='NumbStock'>{stock-regreCounter}</p>
-                            <h6 className='TitleStock'>Disponibles</h6>
-                        </article>
-                        {
-                            !isInCar(id)
-                                ? null
-                                : <Link to="/car"> Ir Carrito </Link>
-                        }
                         {
                             (stockAc<=0)
-                                ? <div> chao</div>
+                                ? <section className="ContaineShot"> chao</section>
                                 : <ButtonQuantity 
                                     stockAc = {stockAc}
                                     max = {stock-regreCounter}
@@ -73,6 +64,11 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
                                     counter = {counter}
                                     onAdd={handleCar}
                                     />
+                        }
+                        {
+                            !isInCar(id)
+                                ? null
+                                : <Link to="/car"> Ir Carrito </Link>
                         }
                     </article>
             </section>

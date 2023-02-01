@@ -9,22 +9,30 @@ export const ButtonQuantity = ({counter, setCounter, max, onAdd, stockAc}) => {
     }
     return (
         <div className='NubQuantity'>
-            <section className='TitleQuantity' >
-                <h6>Cantidad:</h6>
+            <section className='Stock'>
+                <p className='NumbStock'>{stockAc}</p>
+                <h6 className='TitleStock'>Unid.</h6>
             </section>
-            <section className='ButtonQuantity'>
-                <button className="ButtonMinus" onClick={handleMinus}>
-                    <span className="material-icons md-70">remove</span>
-                </button>
-                <p className="Quantity">{counter}</p>
-                <button className="ButtonMore" onClick={handleMore}>
-                    <span className="material-icons md-70">add</span>
-                </button>
+            <section className="ContainerQuantity">
+                <article className='TitleQuantity' >
+                    <h6>Cantidad:</h6>
+                </article>
+                <article className='ButtonQuantity'>
+                    <button className="ButtonMinus" onClick={handleMinus}>
+                        <span className="material-icons md-70">remove</span>
+                    </button>
+                    <p className="Quantity">{counter}</p>
+                    <button className="ButtonMore" onClick={handleMore}>
+                        <span className="material-icons md-70">add</span>
+                    </button>
+                </article>
             </section>
             {
                 (stockAc+1 <= counter)
-                ?<div><p>Debes solicitar una cantidad menor al stock actual: {stockAc}</p></div>
-                :<button className='ButtonCar' onClick={onAdd} >Agregar Carrito</button>
+                ?<section className="ContainerButton"><p>Debes solicitar una cantidad menor al stock actual: {stockAc}</p></section>
+                :<section className="ContainerButton">
+                    <button className="ButtonCar" onClick={onAdd} >Agregar Carrito</button>
+                </section>
             }
         </div>
     )

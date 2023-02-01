@@ -1,53 +1,110 @@
 @import '../../../../constant.scss';
 
 .NubQuantity{
-    display: flex;
-    grid-gap: 20px;
-    justify-content: flex-end;
+    display: grid;
+    grid-gap: 10px;
     align-items: center;
-    .TitleQuantity{
-        color: $color5;
-    }
-    .ButtonQuantity{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "Stock ContainerQuantity"
+        "ContainerButton ContainerButton"
+        ;   
+    .Stock{
+        grid-area: Stock;
+        justify-content: flex-start;
         display: flex;
-        justify-items: center;
-        max-height: 40px;
-        min-width: 120px;
-        border: 1px solid $color5;
-        border-radius: 20px;
-        justify-content: space-between;
-        .ButtonMinus{
-            border-radius: 22px;
-            border: none;
-            @extend %glassB; 
-            &:hover{
-                color: $color2 ;
-                @extend %transition1;
-                @extend %glassH;
-                background: $color3;
-                border: 1px solid $color3;
-            }          
+        align-items: center;
+        .TitleStock{
+            color: $color5;
+            margin-left: 10px;
         }
-        .Quantity{
-            display: grid;
+        .NumbStock{
+            color: $color3;
+            font-size: 22px;
             font-weight: 600;
-            font-size: 18px;
-            align-content: center;
         }
-        .ButtonMore{
-            border-radius: 22px;
-            border: none;
-            @extend %glassB; 
-            &:hover{
-                color: $color2 ;
-                @extend %transition1;
-                @extend %glassH;
-                background: $color3;
-                border: 1px solid $color3;
+    }
+    .ContainerQuantity{
+        grid-area: ContainerQuantity;
+        color: $color5;
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        min-height: 70px;
+        .ButtonQuantity{
+            grid-area: ButtonQuantity;
+            display: flex;
+            justify-items: center;
+            max-height: 40px;
+            min-width: 120px;
+            border: 1px solid $color5;
+            border-radius: 20px;
+            justify-content: space-between;
+            .ButtonMinus{
+                border-radius: 22px;
+                border: none;
+                @extend %glassB; 
+                &:hover{
+                    color: $color2 ;
+                    @extend %transition1;
+                    @extend %glassH;
+                    background: $color3;
+                    border: 1px solid $color3;
+                }          
+            }
+            .Quantity{
+                display: grid;
+                font-weight: 600;
+                font-size: 18px;
+                align-content: center;
+                color: $color1;
+            }
+            .ButtonMore{
+                border-radius: 22px;
+                border: none;
+                @extend %glassB; 
+                &:hover{
+                    color: $color2 ;
+                    @extend %transition1;
+                    @extend %glassH;
+                    background: $color3;
+                    border: 1px solid $color3;
+                }
             }
         }
     }
+    .ContainerButton{
+        grid-area: ContainerButton;
+        display: grid;
+        min-height: 40px;
+        .ButtonCar{
+            display: grid;
+            font-family: $font;
+            font-size: $fontSize;
+            padding: 15px 0 15px 0;
+            border-radius: 15px;
+            @extend %glass;
+            color: $color1;
+            border: 2px solid $color1;
+            text-decoration: none;
+            justify-items: center;
+            align-items: center;
+            &:hover{
+                font-weight: 500;
+                border: 2px solid $color3;
+                color: $color2 ;
+                @extend %transition1;
+                @extend %glassH;
+                background: #a9ff38;
+            }
+        }
+    }
+    
 }
+
+
+
+
 
 @media all and (max-width:600px){
     .NubQuantity{

@@ -58,57 +58,12 @@
                 font-size: 14px;
             }
         }
-        .ItemStock{
-            width: 60%;
-            display: grid;
-            grid-gap: 20px;
-            grid-template-columns: repeat(2,1fr);
-            .Stock{
-                display: flex;
-                align-items: center;
-                justify-items: center;
-                justify-content: center;
-                .TitleStock{
-                    color: $color5;
-                    margin-left: 20px;
-                }
-                .NumbStock{
-                    color: $color3;
-                    font-size: 18px;
-                    font-weight: 600;
-                }
-            }
-        }
         .PreciProduct{
             font-size: 45px;
             color: $color3;
             font-weight:700;
             p{
                 margin: 0px;
-            }
-        }
-        .ButtonCar{
-            display: grid;
-            width: 40%;
-            max-width: 200px;
-            font-family: $font;
-            font-size: $fontSize;
-            margin: 10px 0 0 0;
-            padding: 10px 0 10px 0;
-            border-radius: 15px;
-            @extend %glass;
-            color: $color1;
-            border: 2px solid $color1;
-            text-decoration: none;
-            justify-items: center;
-            align-items: center;
-            &:hover{
-                font-weight: 500;
-                border: 2px solid $color3;
-                color: $color2 ;
-                @extend %transition1;
-                @extend %glassH;
-                background: #a9ff38;
             }
         }
     }
@@ -161,9 +116,6 @@
                 width: 60%;
                 grid-gap: 10px;
                 grid-template-columns: 1fr;
-            }
-            .ButtonCar{
-                width: 90%;
             }
         }
     }
