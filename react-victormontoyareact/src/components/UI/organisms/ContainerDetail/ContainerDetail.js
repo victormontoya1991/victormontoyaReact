@@ -8,6 +8,7 @@ import { ButtonLike } from '../../atoms/ButtoLike/ButtonLike'
 import { CarContext } from '../../../../context/CarContext'
 
 const ContainerDetail = ({id, name, image, description, price, category, stock}) => {
+    // Info Produc
     const{ addCar,isInCar } = useContext (CarContext)
     const [counter, setCounter] = useState (1)
     const handleCar = () => {
@@ -23,7 +24,12 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
         }
         addCar (itemCar)
     }
-    
+    const {mycar} = useContext( CarContext );
+    // Max Counter
+    const maxCounter = mycar.filter(item => item.id === id);
+    const regre = function(cont){return cont.counter;}
+    const regreCounter = maxCounter.map(regre)
+    const stockAc = stock-regreCounter
     return(
         <div className="ContainerProduct" id={id}>
             <section className='HeaderProduct'>
@@ -49,21 +55,25 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
                     </article>
                     <article className='ItemStock'>
                         <article className='Stock'>
-                            <p className='NumbStock'>{stock}</p>
+                            <p className='NumbStock'>{stock-regreCounter}</p>
                             <h6 className='TitleStock'>Disponibles</h6>
                         </article>
                         {
                             !isInCar(id)
                                 ? null
                                 : <Link to="/car"> Ir Carrito </Link>
-
                         }
-                        <ButtonQuantity 
-                            max = {stock} 
-                            setCounter = {setCounter}
-                            counter = {counter}
-                            onAdd={handleCar}
-                        />
+                        {
+                            (stockAc<=0)
+                                ? <div> chao</div>
+                                : <ButtonQuantity 
+                                    stockAc = {stockAc}
+                                    max = {stock-regreCounter}
+                                    setCounter = {setCounter}
+                                    counter = {counter}
+                                    onAdd={handleCar}
+                                    />
+                        }
                     </article>
             </section>
         </div>
