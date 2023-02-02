@@ -52,11 +52,13 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
                     </article>
                     <article className='PreciProduct'>
                         <p>${price}</p>
-                    </article>
+                    </article> 
                     <article className='ItemStock'>
                         {
                             (stockAc<=0)
-                                ? <section className='ContaineShot'> chao</section>
+                                ? <div className='ContainerAlert'>
+                                        <section className='Alert'>Upss... Agotado</section>
+                                    </div>
                                 : <ButtonQuantity 
                                     stockAc = {stockAc}
                                     max = {stock-regreCounter}
@@ -67,8 +69,11 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
                         }
                         {
                             !isInCar(id)
-                                ? null
-                                : <Link className='ButtonC' to="/car"> Ir Carrito </Link>
+                                ?null
+                                :<div className='CarButton'>
+                                    <Link className='ButtonC' to="/car"> Ir Carrito </Link>
+                                </div>
+
                         }
                     </article>
             </section>

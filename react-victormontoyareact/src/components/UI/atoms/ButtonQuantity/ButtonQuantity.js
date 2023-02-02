@@ -29,7 +29,12 @@ export const ButtonQuantity = ({counter, setCounter, max, onAdd, stockAc}) => {
             </section>
             {
                 (stockAc+1 <= counter)
-                ?<section className="ContainerButton"><p>Debes solicitar una cantidad menor al stock actual: {stockAc}</p></section>
+                ?<section className="ContainerButton">
+                        <div className='Alert'> 
+                            <span className="material-icons md-70">info_outline</span>
+                            <p>Upss... Solo hay {stockAc} disponibles...</p>
+                        </div>
+                    </section>
                 :<section className="ContainerButton">
                     <button className="ButtonCar" onClick={onAdd} >Agregar Carrito</button>
                 </section>

@@ -15,6 +15,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 15px;
         .MigasProduct{
             color: $color5;
             a{
@@ -67,28 +68,38 @@
             }
         }
         .ItemStock{
-            .ContaineShot{
+            width: 70%;
+            .ContainerAlert{
+                display: flex;
                 min-height: 50px;
+                width: 100%;
+                justify-content: center;
             }
-            .ButtonC{
-                margin-top: 20px;
+            .CarButton{
                 display: grid;
-                font-family: $font;
-                font-size: $fontSize;
-                padding: 15px 0 15px 0;
-                border-radius: 15px;
-                background: #ba80fd;
-                color: $color2;
-                border: 2px solid #ba80fd;
-                text-decoration: none;
-                justify-items: center;
+                width: 100%;
                 align-items: center;
-                font-weight: 600;
-                &:hover{
-                    border: 2px solid $color1;
-                    @extend %transition1;
-                    @extend %glass;
-                    background: $color1;
+                .ButtonC{
+                    margin-top: 20px;
+                    display: grid;
+                    font-family: $font;
+                    font-size: $fontSize;
+                    padding: 15px 0 15px 0;
+                    border-radius: 15px;
+                    background: $color7;
+                    color: $color2;
+                    border: 2px solid $color7;
+                    text-decoration: none;
+                    justify-items: center;
+                    align-items: center;
+                    font-weight: 600;
+                    @extend %glassD;
+                    &:hover{
+                        border: 2px solid $color1;
+                        @extend %transition1;
+                        @extend %glass;
+                        background: $color1;
+                    }
                 }
             }
         }
@@ -127,6 +138,7 @@
 }
 @media all and (max-width:600px){
     .ContainerProduct{
+        padding: 230px 5%;
         grid-gap: 10px;
         .ContectsProduct{ 
             grid-gap: 0px;
@@ -141,7 +153,7 @@
             }
             .ItemStock{
                 width: 90%;
-                grid-gap: 10px;
+                grid-gap: 30px;
                 grid-template-columns: 1fr;
             }
         }

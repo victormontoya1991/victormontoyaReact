@@ -7,7 +7,10 @@ export const CarWidget = () => {
     const {mycar} = useContext( CarContext )
     return(
         <Link to="/car" className= "iconCar">
-            <div className="numbCar"><p>{mycar.length}</p></div>
+            {(mycar.length===0)
+                ?null
+                :<div className="numbCar"><p>{mycar.length}</p></div>
+            }
             <span className="material-icons md-70">shopping_cart</span>
         </Link>
     )

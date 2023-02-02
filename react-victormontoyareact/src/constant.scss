@@ -6,6 +6,7 @@ $color3: #a9ff38;
 $color4:rgb(255, 39, 39);
 $color5: grey;
 $color6: #ffffff14;
+$color7: #ba80fd;
 $hover: 0 0 0.2em #a9ff3870, 0 0 0.2em #a9ff3883;
 %hover1{
     &:hover{
@@ -34,6 +35,13 @@ $fontSizeH: 16px;
     -webkit-backdrop-filter: blur(20px);
 }
 
+%glassD{
+    background: #ba80fd7a;
+    box-shadow: 0 4px 30px #ba80fd93;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
 %glassB{
     background: #ffffff60;
     backdrop-filter: blur(20px);
@@ -56,4 +64,14 @@ $fontSizeH: 16px;
     transition-timing-function: linear;
 }
 
+
+.Alert{
+    color: #ff5353;
+    display: flex;
+    width: 100%;
+    border: 2px solid #ff5353;;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+}
 
