@@ -11,7 +11,13 @@ header{
 }
 
 @media screen and (max-width: 850px){
-    .logoBrand{
+    header{
+        .logoBrand{
             justify-content: center;
+            img{
+                min-width: 100px;
+                max-width: 100px;
+            }
+        }
     }
 }

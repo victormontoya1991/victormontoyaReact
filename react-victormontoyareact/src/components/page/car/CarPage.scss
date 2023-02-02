@@ -18,14 +18,17 @@
             width: 100%;
             display: grid;
             grid-template-columns: repeat(5, 1fr);
+            grid-template-areas: "ImgCar NameCar DateCar DateCar2 Total";
             padding: 20px;
             border-bottom: 1px solid $color5;
-            img{
+            .ImgCar{
+                grid-area:ImgCar;
                 width: 100px;
                 border-radius: 30px;
                 height: auto;
             }
-            a{
+            .NameCar{
+                grid-area:NameCar;
                 text-decoration: none;
                 color: $color3;
                 h6{
@@ -39,11 +42,19 @@
                 }
             }
             .DateCar{
+                grid-area:DateCar;
+                text-align: center;
+                font-size: 15px;
+                color:$color5;
+            }
+            .DateCar2 {
+                grid-area:DateCar2;
                 text-align: center;
                 font-size: 15px;
                 color:$color5;
             }
             .Total{
+                grid-area:Total;
                 .OrdTotal{
                     display: flex;
                     align-items: center;
@@ -66,6 +77,46 @@
                     padding: 0px;
                     margin: 0px;
                 }
+            }
+        }
+    }
+}
+
+@media all and (max-width:900px){
+    .CarPage{
+        padding: 220px 5%;
+        .ListProduct{
+            width: 95%;
+            .CardProduct{
+                width: 100%;
+                padding: 15px 10px;
+                grid-template-columns: 30% 70%;
+                grid-template-areas: 
+                    "ImgCar NameCar"
+                    "ImgCar DateCar2"
+                    "ImgCar Total"
+                    "DateCar  Total"
+                    ;
+                    .ImgCar{
+                        width: 70px;
+                        border-radius: 16px;
+                    }
+                    .DateCar{
+                        text-align: start;
+                    }
+                    .DateCar2{
+                        text-align: end;
+                    }
+                    .NameCar{
+                        h6{
+                            font-size: 12px;
+                            text-align: end;
+                        }
+                        
+                    }
+                    .Total{
+                        margin-top: -20px;
+                    }
             }
         }
     }

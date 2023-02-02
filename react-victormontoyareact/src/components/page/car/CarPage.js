@@ -15,10 +15,10 @@ const CarPage = () => {
                     {
                         mycar.map(itemCar => (
                             <article key={itemCar.id} className='CardProduct'>
-                                <img src={itemCar.image} alt={itemCar.name} />
-                                <Link to={`/products/${itemCar.id}`}><h6>{itemCar.name}</h6></Link>
+                                <img className='ImgCar' src={itemCar.image} alt={itemCar.name} />
+                                <Link className='NameCar' to={`/products/${itemCar.id}`}><h6>{itemCar.name}</h6></Link>
                                 <p className='DateCar'>Cant: {itemCar.counter}</p>
-                                <p className='DateCar'>C/U: ${itemCar.price}</p>
+                                <p className='DateCar2'>C/U: ${itemCar.price}</p>
                                 <div className='Total'>
                                     <div className='OrdTotal'>
                                         <p className='TitleT'>Total: </p>
@@ -29,6 +29,7 @@ const CarPage = () => {
                             </article>
                         ))
                     }
+                    <article> Total</article>
             </section>
         </div>
     );

@@ -20,6 +20,7 @@ header{
 @media screen and (max-width: 850px){
     header{
         .pageHeader{
+            padding: 10px 5%;
             grid-template-areas: 
             "hamburguesaMenu logoBrand CarWidget"
             "SearchWindow SearchWindow SearchWindow";
