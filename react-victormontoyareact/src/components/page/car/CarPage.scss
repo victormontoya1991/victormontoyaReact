@@ -2,11 +2,71 @@
 
 .CarPage{
     color: $color1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: auto;
+    padding: 250px 10%;
     .TitleCar{
         padding-top: 250px;
+        height: 100px;
         color: $color1;
     }
-    img{
-        width: 150px;
+    .ListProduct{
+        display: grid;
+        .CardProduct{
+            align-items: center;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            padding: 20px;
+            border-bottom: 1px solid $color5;
+            img{
+                width: 100px;
+                border-radius: 30px;
+                height: auto;
+            }
+            a{
+                text-decoration: none;
+                color: $color3;
+                h6{
+                    font-size: 18px;
+                    padding: 0px;
+                    margin: 0px;
+                    
+                }
+                &:hover{
+                    color: $color5;
+                }
+            }
+            .DateCar{
+                text-align: center;
+                font-size: 15px;
+                color:$color5;
+            }
+            .Total{
+                .OrdTotal{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    grid-gap: 10px;
+                    .TitleT{
+                        font-size: 10px;
+                        
+                    }
+                    h5{
+                        font-size: 20px;
+                        margin: 0px;
+                        padding: 0px;
+                    }
+                }
+                .Discunt{
+                    text-align: end;
+                    font-size: 12px;
+                    color:$color7;
+                    padding: 0px;
+                    margin: 0px;
+                }
+            }
+        }
     }
 }
