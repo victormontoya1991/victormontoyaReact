@@ -34,7 +34,8 @@
             img{
                 border-radius: 70px;
                 width: auto;
-                max-height:90vh;
+                height:auto;
+                max-width: 100%;
             }
         }
     }
@@ -69,12 +70,6 @@
         }
         .ItemStock{
             width: 70%;
-            .ContainerAlert{
-                display: flex;
-                min-height: 50px;
-                width: 100%;
-                justify-content: center;
-            }
             .CarButton{
                 display: grid;
                 width: 100%;

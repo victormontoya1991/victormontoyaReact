@@ -56,9 +56,10 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
                     <article className='ItemStock'>
                         {
                             (stockAc<=0)
-                                ? <div className='ContainerAlert'>
-                                        <section className='Alert'>Upss... Agotado</section>
-                                    </div>
+                                ? <div className='Alert'> 
+                                    <span className="material-icons md-70">info_outline</span>
+                                    <p >Upss... Agotado</p>
+                                </div>
                                 : <ButtonQuantity 
                                     stockAc = {stockAc}
                                     max = {stock-regreCounter}
