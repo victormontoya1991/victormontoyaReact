@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: auto;
-    padding: 250px 10%;
+    padding: 250px 10%; 
     .TitleCar{
         padding-top: 250px;
         height: 100px;
@@ -84,7 +84,7 @@
 
 @media all and (max-width:900px){
     .CarPage{
-        padding: 220px 5%;
+        padding: 220px 5% 50px;
         .ListProduct{
             width: 95%;
             .CardProduct{
