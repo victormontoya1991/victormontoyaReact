@@ -1,6 +1,12 @@
 @import '../../../../constant.scss';
 
-.CardProduct{
+.CardProduct{align-items: center;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "ImgCar NameCar DateCar DateCar2 Total";
+    padding: 20px;
+    border-bottom: 1px solid $color5;
     .ImgCar{
         grid-area:ImgCar;
         width: 100px;
@@ -15,7 +21,6 @@
             font-size: 18px;
             padding: 0px;
             margin: 0px;
-            
         }
         &:hover{
             color: $color5;
@@ -26,36 +31,84 @@
         text-align: center;
         font-size: 15px;
         color:$color5;
+        margin: 0px;
     }
     .DateCar2 {
         grid-area:DateCar2;
         text-align: center;
         font-size: 15px;
         color:$color5;
+        margin: 0px;
+    }
+    .Total{
+        grid-area:Total;
+        .OrdTotal{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            grid-gap: 10px;
+            .TitleT{
+                font-size: 10px;
+                
+            }
+            h5{
+                font-size: 18px;
+                font-weight: 400;
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+        .Discunt{
+            text-align: end;
+            font-size: 11px;
+            color:$color7;
+            padding: 0px;
+            margin: 0px;
+            text-decoration: line-through;
+        }
     }
 }
 
 @media all and (max-width:900px){
     .CarPage{
         .ListProduct{
-            width: 95%;
+            width: auto;
             .CardProduct{
-                    .ImgCar{
-                        width: 70px;
-                        border-radius: 16px;
-                    }
-                    .DateCar{
-                        text-align: start;
-                    }
-                    .DateCar2{
+                padding: 15px 10px;
+                grid-template-columns: 30% 70%;
+                grid-template-areas: 
+                    "ImgCar NameCar"
+                    "ImgCar DateCar2"
+                    "ImgCar Total"
+                    "DateCar  Total"
+                    ;
+                .ImgCar{
+                    width: 70px;
+                    border-radius: 16px;
+                }
+                .DateCar{
+                    text-align: start;
+                }
+                .DateCar2{
+                    text-align: end;
+                    font-size: 10px;
+                }
+                .NameCar{
+                    h6{
+                        font-size: 12px;
                         text-align: end;
                     }
-                    .NameCar{
-                        h6{
-                            font-size: 12px;
-                            text-align: end;
+                }
+                .Total{
+                    .OrdTotal{
+                        h5{
+                            font-size: 15px;
+                            font-weight: 400;
+                            margin: 0px;
+                            padding: 0px;
                         }
                     }
+                }
             }
         }
     }

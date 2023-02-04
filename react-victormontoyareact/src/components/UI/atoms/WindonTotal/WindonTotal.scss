@@ -4,6 +4,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+    width: auto;
+    padding: 20px;
     .ContainerEmpty{
         .ButtonEmpty{
             color:$color1;
@@ -31,4 +33,36 @@
             }
         }
     } 
+    .ContainTotal{
+        display: grid;
+        align-items: center;
+        justify-items: end;
+        .Discunt{
+            font-size: 10px;
+            color: $color7 ;
+            text-decoration: line-through;
+        }
+        .Total{
+            font-size: 11px;
+            display: flex;
+            grid-gap: 10px;
+            align-items: center;
+            margin: 0px;
+            p{
+                font-size: 24px;
+                margin: 0px;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media all and (max-width:900px){
+    .WindonTotal{
+        .ContainerEmpty{
+            .ButtonEmpty{
+                display: none;
+            }
+        }
+    }
 }

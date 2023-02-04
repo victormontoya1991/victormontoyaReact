@@ -13,58 +13,11 @@
     }
     .ListProduct{
         display: grid;
-        .CardProduct{
-            align-items: center;
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-areas: "ImgCar NameCar DateCar DateCar2 Total";
-            padding: 20px;
-            border-bottom: 1px solid $color5;
-            .Total{
-                grid-area:Total;
-                .OrdTotal{
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-end;
-                    grid-gap: 10px;
-                    .TitleT{
-                        font-size: 10px;
-                        
-                    }
-                    h5{
-                        font-size: 20px;
-                        margin: 0px;
-                        padding: 0px;
-                    }
-                }
-                .Discunt{
-                    text-align: end;
-                    font-size: 12px;
-                    color:$color7;
-                    padding: 0px;
-                    margin: 0px;
-                }
-            }
-        }
     }
 }
 
 @media all and (max-width:900px){
     .CarPage{
-        padding: 220px 5% 50px;
-        .ListProduct{
-            .CardProduct{
-                width: 100%;
-                padding: 15px 10px;
-                grid-template-columns: 30% 70%;
-                grid-template-areas: 
-                    "ImgCar NameCar"
-                    "ImgCar DateCar2"
-                    "ImgCar Total"
-                    "DateCar  Total"
-                    ;
-            }
-        }
+        padding: 220px 10% 50px;
     }
 }
