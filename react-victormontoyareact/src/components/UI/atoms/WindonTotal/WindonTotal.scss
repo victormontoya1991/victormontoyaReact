@@ -1,0 +1,34 @@
+@import '../../../../constant.scss';
+
+.WindonTotal{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    .ContainerEmpty{
+        .ButtonEmpty{
+            color:$color1;
+            margin-top: 20px;
+            display: flex;
+            font-family: $font;
+            font-size: 10px;
+            padding: 10px 20px;
+            border-radius: 15px;
+            border: none;
+            text-decoration: none;
+            justify-items: center;
+            align-items: center;
+            font-weight: 600;
+            background: #ff383865;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            &:hover{
+                background: rgba(54, 54, 54, 0.7);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+            }
+            span{
+                font-size: 12px;
+            }
+        }
+    } 
+}

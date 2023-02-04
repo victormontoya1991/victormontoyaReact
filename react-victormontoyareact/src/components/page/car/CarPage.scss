@@ -21,38 +21,6 @@
             grid-template-areas: "ImgCar NameCar DateCar DateCar2 Total";
             padding: 20px;
             border-bottom: 1px solid $color5;
-            .ImgCar{
-                grid-area:ImgCar;
-                width: 100px;
-                border-radius: 30px;
-                height: auto;
-            }
-            .NameCar{
-                grid-area:NameCar;
-                text-decoration: none;
-                color: $color3;
-                h6{
-                    font-size: 18px;
-                    padding: 0px;
-                    margin: 0px;
-                    
-                }
-                &:hover{
-                    color: $color5;
-                }
-            }
-            .DateCar{
-                grid-area:DateCar;
-                text-align: center;
-                font-size: 15px;
-                color:$color5;
-            }
-            .DateCar2 {
-                grid-area:DateCar2;
-                text-align: center;
-                font-size: 15px;
-                color:$color5;
-            }
             .Total{
                 grid-area:Total;
                 .OrdTotal{
@@ -86,7 +54,6 @@
     .CarPage{
         padding: 220px 5% 50px;
         .ListProduct{
-            width: 95%;
             .CardProduct{
                 width: 100%;
                 padding: 15px 10px;
@@ -97,26 +64,6 @@
                     "ImgCar Total"
                     "DateCar  Total"
                     ;
-                    .ImgCar{
-                        width: 70px;
-                        border-radius: 16px;
-                    }
-                    .DateCar{
-                        text-align: start;
-                    }
-                    .DateCar2{
-                        text-align: end;
-                    }
-                    .NameCar{
-                        h6{
-                            font-size: 12px;
-                            text-align: end;
-                        }
-                        
-                    }
-                    .Total{
-                        margin-top: -20px;
-                    }
             }
         }
     }

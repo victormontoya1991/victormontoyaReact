@@ -9,6 +9,7 @@ import { CarContext } from '../../../../context/CarContext'
 const ContainerDetail = ({id, name, image, description, price, category, stock}) => {
     // Info Produc
     const{ addCar,isInCar } = useContext (CarContext)
+    const {mycar} = useContext( CarContext );
     const [counter, setCounter] = useState (1)
     const handleCar = () => {
         const itemCar = {
@@ -23,7 +24,6 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
         }
         addCar (itemCar)
     }
-    const {mycar} = useContext( CarContext );
     // Max Counter
     const maxCounter = mycar.filter(item => item.id === id);
     const regre = function(cont){return cont.counter;}

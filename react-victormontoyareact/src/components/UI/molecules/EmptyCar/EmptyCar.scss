@@ -1,0 +1,37 @@
+@import '../../../../constant.scss';
+
+.EmptyCar{
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    grid-gap: 40px;
+    h2{
+        text-align: center;
+        font-size: 28px;
+    }
+    a{
+        margin-top: 20px;
+        display: grid;
+        font-family: $font;
+        font-size: $fontSize;
+        padding: 15px 25px;
+        border-radius: 15px;
+        background: $color7;
+        color: $color2;
+        border: 2px solid $color7;
+        text-decoration: none;
+        justify-items: center;
+        align-items: center;
+        font-weight: 700;
+        @extend %glassD;
+        &:hover{
+            border: 2px solid $color1;
+            @extend %transition1;
+            @extend %glass;
+            background: $color1;
+        }
+    }
+}

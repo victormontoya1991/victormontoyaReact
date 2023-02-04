@@ -7,7 +7,6 @@ export const CarProvider = ({children}) =>{
     const addCar = (itemCar) => {
         setCar([...car, itemCar])
     }
-    console.log(car)
     // Filter Data Context
     const isInCar = (id) => {
         return car.some(itemCar => itemCar.id === id)

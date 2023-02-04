@@ -1,16 +1,30 @@
 @import '../../../../constant.scss';
 
-.IconFavorite{
+.IconDelete{
+    background: none;
+    border: none;
     position:absolute;
-    .material-icons{
-        margin-top: -10px;
+    .delete{
+        color:$color1;
+        margin-top: -5px;
         margin-left: -10px;
-        padding: 15px;
+        padding: 5px;
+        font-size: 25px;
         border-radius:50%;
         @extend %glass;
+        background: rgba(230, 0, 0, 0.438);
+        box-shadow: 0 4px 30px rgba(221, 0, 0, 0.212);
         &:hover{
-            @extend %glassH;
+            @extend %glass;
             @extend %transition1;
+        }
+    }
+}
+
+@media all and (max-width:900px){
+    .IconDelete{
+        .delete{
+            font-size: 18px;
         }
     }
 }

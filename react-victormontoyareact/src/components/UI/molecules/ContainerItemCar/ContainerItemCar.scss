@@ -1,0 +1,62 @@
+@import '../../../../constant.scss';
+
+.CardProduct{
+    .ImgCar{
+        grid-area:ImgCar;
+        width: 100px;
+        border-radius: 30px;
+        height: auto;
+    }
+    .NameCar{
+        grid-area:NameCar;
+        text-decoration: none;
+        color: $color3;
+        h6{
+            font-size: 18px;
+            padding: 0px;
+            margin: 0px;
+            
+        }
+        &:hover{
+            color: $color5;
+        }
+    }
+    .DateCar{
+        grid-area:DateCar;
+        text-align: center;
+        font-size: 15px;
+        color:$color5;
+    }
+    .DateCar2 {
+        grid-area:DateCar2;
+        text-align: center;
+        font-size: 15px;
+        color:$color5;
+    }
+}
+
+@media all and (max-width:900px){
+    .CarPage{
+        .ListProduct{
+            width: 95%;
+            .CardProduct{
+                    .ImgCar{
+                        width: 70px;
+                        border-radius: 16px;
+                    }
+                    .DateCar{
+                        text-align: start;
+                    }
+                    .DateCar2{
+                        text-align: end;
+                    }
+                    .NameCar{
+                        h6{
+                            font-size: 12px;
+                            text-align: end;
+                        }
+                    }
+            }
+        }
+    }
+}

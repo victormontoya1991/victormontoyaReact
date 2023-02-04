@@ -1,10 +1,9 @@
 import './ButtonDelete.scss';
 
-export const ButtonDelete = ( id, deleteCar ) => {
-
+export const ButtonDelete = ({delet, id}) => {
     return (
-        <div className='IconFavorite'>
-            <span className="material-icons md-70">delete</span>
-        </div>
+        <button className='IconDelete' onClick={()=>delet(id)}>
+            <span className="material-icons md-50 delete">delete</span>
+        </button>
     )
 }
