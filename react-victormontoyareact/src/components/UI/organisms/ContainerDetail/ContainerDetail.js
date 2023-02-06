@@ -38,8 +38,8 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
                 <ButtonReturn />
             </section>
             <section className='PintureProduct'>
+                <ButtonLike />
                 <article className='PintureImg'>
-                    <ButtonLike />
                     <img alt="{name}" src={image}/>
                 </article>
             </section>

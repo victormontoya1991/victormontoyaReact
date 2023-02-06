@@ -19,6 +19,7 @@
     .PageListProducts{
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 40px;
+        padding: 250px 5%;
     }
 }
 
@@ -26,5 +27,6 @@
     .PageListProducts{
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
+        padding: 230px 5%;
     }
 }

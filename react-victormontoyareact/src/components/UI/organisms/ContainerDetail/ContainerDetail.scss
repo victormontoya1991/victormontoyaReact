@@ -2,10 +2,11 @@
 
 .ContainerProduct{
     display:grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
     margin-bottom: 20px;
     grid-gap: 50px;
     padding: 250px 10%;
+    max-width: 1300px;
     color: $color1;
     grid-template-areas: 
         "HeaderProduct HeaderProduct"
@@ -28,14 +29,17 @@
         }
     }
     .PintureProduct{
-        grid-area: PintureProduct;
-        display: grid;
         .PintureImg{
+            grid-area: PintureProduct;
+            background: #6b6b6b52;
+            backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+            border-radius: 70px;
             img{
-                border-radius: 70px;
-                width: auto;
-                height:auto;
-                max-width: 100%;
+                filter: drop-shadow( 4px 4px 8px $color2);
+                padding: 10%;
+                height: auto;
+                width: 80%;
             }
         }
     }
@@ -118,13 +122,11 @@
         "ContectsProduct";
         .PintureProduct{
             display: grid;
-            justify-items: center;
             .PintureImg{
-                
                 img{
                     border-radius: 50px;
                     width: auto;
-                    max-width: 100%;
+                    max-width: 80%;
                 }
                 
             }

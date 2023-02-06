@@ -1,18 +1,29 @@
 @import '../../../../constant.scss';
 
 .ContainerItenProduct{
-    max-width: 90%;
+    max-width: 80%;
     display:grid;
     justify-items: center;
     align-content: center;
-    .ImgItenProduct{
-        img{
-            border-radius: 60px;
-            @extend %hover1;
+    .ContainerImg{
+        background: #6b6b6b52;
+        backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        border-radius: 60px;
+        @extend %hover1;
+        .ImgItenProduct{
+            img{
+                filter: drop-shadow( 4px 4px 8px $color2);
+                padding: 10%;
+                height: auto;
+                width: 80%;
+            }
         }
     }
+    
     .TitleItenProduct{
         margin: 10px 0 4px 0;
+        text-align: center;
     }
     .PreciItenProduct{
         color:$color3;
@@ -57,11 +68,6 @@
 /*------------------------------------------------*/
 @media all and (max-width:1500px){
     .ContainerItenProduct{
-        .ImgItenProduct{
-            img{
-                border-radius: 45px;
-            }
-        }
         .TitleItenProduct{
             font-size: 16px;
         }
@@ -82,10 +88,8 @@
 
 @media all and (max-width:980px){
     .ContainerItenProduct{
-        .ImgItenProduct{
-            img{
-                border-radius: 35px;
-            }
+        .ContainerImg{
+            border-radius: 40px;
         }
         .TitleItenProduct{
             text-align: center;

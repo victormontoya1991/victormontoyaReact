@@ -1,3 +1,4 @@
+import './ItemDetailContainer.scss'
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ContainerDetail from "../../../UI/organisms/ContainerDetail/ContainerDetail"
@@ -19,7 +20,7 @@ const ItemDetailContainer =() => {
     }, [producId])
 
     return (
-        <div>
+        <div className="PageProduct">
             {
                 product && <ContainerDetail {...product}/>
             }

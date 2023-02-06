@@ -10,8 +10,19 @@
     .ImgCar{
         grid-area:ImgCar;
         width: 100px;
-        border-radius: 30px;
         height: auto;
+        .ContainerImg{
+            background: #6b6b6b52;
+            backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+            border-radius: 15px;
+            img{
+                filter: drop-shadow( 4px 4px 8px $color2);
+                padding: 10%;
+                height: auto;
+                width: 80%;
+            }
+        }
     }
     .NameCar{
         grid-area:NameCar;

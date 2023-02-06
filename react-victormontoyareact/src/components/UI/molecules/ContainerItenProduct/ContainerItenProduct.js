@@ -5,10 +5,12 @@ import'./ContainerItenProduct.scss'
 const ContainerItenProduct = ( {name, image, category, price, id }) => {
     return(
         <div className='ContainerItenProduct'>
-            <div className='ImgItenProduct'>
+            <section className='ContainerImg'>
                 <ButtonLike />
-                <img className='ImgProuc' alt="{name}" src={image} />
-            </div>
+                <Link className='ImgItenProduct' to={`/products/${id}`}>
+                    <img className='ImgProuc' alt="{name}" src={image} />
+                </Link>
+            </section>        
             <h4 className='TitleItenProduct'>{name}</h4>
             <p className='CatItenProduct'>Categoria: {category}</p>
             <p className='PreciItenProduct'>${price}</p>
