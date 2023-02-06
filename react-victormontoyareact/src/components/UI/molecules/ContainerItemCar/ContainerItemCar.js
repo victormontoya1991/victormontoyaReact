@@ -35,7 +35,7 @@ const ContainerItemCar = ({id, name, image, price, counter, discount}) => {
                         {
                             discount
                                 ?<h5>{formatterPeso.format(counter * priceDicount)}</h5>
-                                :<h5>{formatterPeso.format(price)}</h5>
+                                :<h5>{formatterPeso.format(counter * price)}</h5>
                         }
                     </div>
                         {

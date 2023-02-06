@@ -6,7 +6,7 @@ import './CarPage.scss'
 import { WindonTotal } from '../../UI/atoms/WindonTotal/WindonTotal';
 
 const CarPage = () => {
-    const {mycar, totalCar, emptyCar } = useContext( CarContext )
+    const {mycar, totalCar, discountCar, emptyCar, formatterPeso } = useContext( CarContext )
     return ( 
         <div className="CarPage">
             {(mycar.length===0)
@@ -17,7 +17,12 @@ const CarPage = () => {
                     </section>
                     <section className='ListProduct'>
                             { mycar.map ((itemCar) => <ContainerItemCar key={itemCar.id} {...itemCar}/>)}
-                            <WindonTotal totalCar={totalCar}  emptyCar={emptyCar}/>
+                            <WindonTotal 
+                                totalCar={totalCar} 
+                                emptyCar={emptyCar} 
+                                discountCar={discountCar}
+                                formatterPeso={formatterPeso}
+                                />
                     </section>
                 </div>
             }

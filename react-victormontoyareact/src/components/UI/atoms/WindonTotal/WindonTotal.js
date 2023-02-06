@@ -1,6 +1,6 @@
 import './WindonTotal.scss'
 
-export const WindonTotal = ({emptyCar, totalCar}) => {
+export const WindonTotal = ({emptyCar, totalCar , discountCar,formatterPeso}) => {
     return (
         <div className="WindonTotal">
             <section className='ContainerEmpty'>
@@ -10,8 +10,9 @@ export const WindonTotal = ({emptyCar, totalCar}) => {
                 </button>
             </section>
             <section className="ContainTotal">
-                <article className='Discunt'> Ahorro -$20.000</article>
-                <article className='Total'> Total <p>${totalCar()}</p></article>
+                <article className='SubTotal'> Sub-Total {formatterPeso.format(totalCar())}</article>
+                <article className='Discunt'> Ahorro -{formatterPeso.format(discountCar())}</article>
+                <article className='Total'> Total <p>{formatterPeso.format(totalCar()-discountCar())}</p></article>
             </section>
         </div>
     );
