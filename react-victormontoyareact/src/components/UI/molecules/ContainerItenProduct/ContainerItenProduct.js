@@ -1,8 +1,18 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ButtonLike } from '../../atoms/ButtoLike/ButtonLike'
 import'./ContainerItenProduct.scss'
 
-const ContainerItenProduct = ( {name, image, category, price, id }) => {
+const ContainerItenProduct = ( {name, image, category, price, id, discount }) => {
+    const formatterPeso = new Intl.NumberFormat('es-CO', {
+        style: 'currency',
+        currency: 'COP',
+        minimumFractionDigits: 0
+    })
+    const [priceDicount , setPriceDicount] = useState ()
+    useEffect(() => {
+        setPriceDicount(price-((price*discount)/100))
+    },[price, discount])
     return(
         <div className='ContainerItenProduct'>
             <section className='ContainerImg'>
@@ -13,7 +23,14 @@ const ContainerItenProduct = ( {name, image, category, price, id }) => {
             </section>        
             <h4 className='TitleItenProduct'>{name}</h4>
             <p className='CatItenProduct'>Categoria: {category}</p>
-            <p className='PreciItenProduct'>${price}</p>
+            {
+                discount
+                ?<section className='ContainerPreci'>
+                    <p className='PreciIten'>{formatterPeso.format(price)}</p>
+                    <p className='PreciItenProduct'>{formatterPeso.format(priceDicount)}</p>
+                </section>
+                :<p className='PreciItenProduct'>{formatterPeso.format(price)}</p>
+            }
             <Link className='ButtonItenProduct' to={`/products/${id}`}>Ver Más</Link>
         </div>
     )

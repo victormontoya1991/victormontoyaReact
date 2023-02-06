@@ -1,12 +1,12 @@
 import './ContainerDetail.scss'
 import { Link } from 'react-router-dom'
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { ButtonReturn } from '../../atoms/ButtonReturn/ButtonReturn'
 import { ButtonQuantity } from '../../atoms/ButtonQuantity/ButtonQuantity'
 import { ButtonLike } from '../../atoms/ButtoLike/ButtonLike'
 import { CarContext } from '../../../../context/CarContext'
 
-const ContainerDetail = ({id, name, image, description, price, category, stock}) => {
+const ContainerDetail = ({id, name, image, description, price, category, stock, discount}) => {
     // Info Produc
     const{ addCar,isInCar } = useContext (CarContext)
     const {mycar} = useContext( CarContext );
@@ -29,6 +29,16 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
     const regre = function(cont){return cont.counter;}
     const regreCounter = maxCounter.map(regre)
     const stockAc = stock-regreCounter
+    // Mon Preci
+    const formatterPeso = new Intl.NumberFormat('es-CO', {
+        style: 'currency',
+        currency: 'COP',
+        minimumFractionDigits: 0
+    })
+    const [priceDicount, setPriceDicount]= useState ()
+    useEffect(() => {
+        setPriceDicount(price-((price*discount)/100))
+    },[price, discount])
     return(
         <div className='ContainerProduct' id={id}>
             <section className='HeaderProduct'>
@@ -50,12 +60,22 @@ const ContainerDetail = ({id, name, image, description, price, category, stock})
                         <p className='Description'>{description}</p>
                     </article>
                     <article className='PreciProduct'>
-                        <p>${price}</p>
+                        {
+                            discount
+                            ?<section className='ContainerPreci'>
+                                <div className='PriceDicount'>
+                                    <p className='TitleIten'>Precio Antes</p>
+                                    <p className='PreciIten'>{formatterPeso.format(price)}</p>
+                                </div>
+                                <p className='PreciItenProduct'>{formatterPeso.format(priceDicount)}</p>
+                            </section>
+                            :<p className='PreciItenProduct'>{formatterPeso.format(price)}</p>
+                        }
                     </article> 
                     <article className='ItemStock'>
                         {
-                            (stockAc<=0)
-                                ? <div className='Alert'> 
+                            stockAc<=0
+                                ?<div className='Alert'> 
                                     <span className="material-icons md-70">info_outline</span>
                                     <p >Upss... Agotado</p>
                                 </div>

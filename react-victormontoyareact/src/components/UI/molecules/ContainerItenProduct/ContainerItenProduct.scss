@@ -31,6 +31,18 @@
         font-size: 20px;
         font-weight: 600;
     }
+    .ContainerPreci{
+        display: flex;
+        grid-gap: 10px;
+        align-items: center;
+        .PreciIten{
+            padding: 0;
+            margin: 0;
+            font-size: 12px;
+            color:$color5;
+            text-decoration: line-through;
+        }
+    }
     .CatItenProduct{
         margin: 0px;
         font-size: 12px;
@@ -88,6 +100,7 @@
 
 @media all and (max-width:980px){
     .ContainerItenProduct{
+        max-width: 90%;
         .ContainerImg{
             border-radius: 40px;
         }
@@ -106,7 +119,13 @@
             text-align: center;
         }
         .PreciItenProduct{
-            font-size: 16px;
+            font-size: 14px;
+        }
+        .ContainerPreci{
+            grid-gap: 6px;
+            .PreciIten{
+                font-size: 10px;
+            }
         }
     }
 }
