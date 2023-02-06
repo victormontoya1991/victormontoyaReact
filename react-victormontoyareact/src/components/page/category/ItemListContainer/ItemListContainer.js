@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import './ItemListContainer'
+import './itemListContainer.scss'
 import { useEffect, useState } from 'react'
 import ContainerListProducts from '../../../UI/organisms/ContainerItenProduct/ContainerListProducts'
 import { useParams } from 'react-router-dom'
@@ -37,7 +37,7 @@ const ItemListContainer = () => {
         <div>
             {
                 loading
-                    ?<h2>Cargando</h2>
+                    ?<div className='Loanding'>Cargando</div>
                     :<ContainerListProducts products={products}/>
             }
         </div>
