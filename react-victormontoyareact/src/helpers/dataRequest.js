@@ -1,4 +1,4 @@
-import MOCK_DATA from '../data/MOCK_DATA.json';
+import MOCK_DATA from '../data/data_produc.json';
 import MOCK_INF from '../data/MOCK_INF.json'
 
 export const dataRequest = () => {

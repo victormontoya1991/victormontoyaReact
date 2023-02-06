@@ -7,7 +7,7 @@ export const MenuBar = () => {
             <Link to="/">Home</Link>
             <Link to="/category/Cascos">Cascos</Link>
             <Link to="/category/Guantes">Guantes</Link>
-            <Link to="/category/Rodilleras">Rodilleras</Link>
+            <Link to="/category/Chaquetas">Chaquetas</Link>
             <Link to="/category/Pantalones">Pantalones</Link>
             <Link to="/contact">Contacto</Link>
         </nav>
