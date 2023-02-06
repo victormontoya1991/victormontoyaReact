@@ -37,7 +37,12 @@
         display: grid;
         align-items: center;
         justify-items: end;
+        .SubTotal{
+            color: $color5;
+            font-size: 14px;
+        }
         .Discunt{
+            text-align: end;
             font-size: 10px;
             color: $color7 ;
             text-decoration: line-through;
@@ -59,6 +64,7 @@
 
 @media all and (max-width:900px){
     .WindonTotal{
+        padding: 20px 10px;
         .ContainerEmpty{
             .ButtonEmpty{
                 display: none;

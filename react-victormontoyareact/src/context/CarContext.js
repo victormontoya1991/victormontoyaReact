@@ -48,7 +48,8 @@ export const CarProvider = ({children}) =>{
     // Discount Car
     const discountCar = ()=>{
         return mycar.reduce((acc, itemCar)=> acc +((itemCar.price*itemCar.discount)/100) * itemCar.counter, 0 )
-    }   
+    }
+    // Discount FormaMoney
     const formatterPeso = new Intl.NumberFormat('es-CO', {
         style: 'currency',
         currency: 'COP',

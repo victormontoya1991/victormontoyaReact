@@ -8,7 +8,7 @@ import { CarContext } from '../../../../context/CarContext'
 
 const ContainerDetail = ({id, name, image, description, price, category, stock, discount}) => {
     // Info Produc
-    const{ addCar,isInCar } = useContext (CarContext)
+    const{ addCar, isInCar, formatterPeso} = useContext (CarContext)
     const {mycar} = useContext( CarContext );
     const [counter, setCounter] = useState (1)
     const handleCar = () => {
@@ -30,12 +30,7 @@ const ContainerDetail = ({id, name, image, description, price, category, stock, 
     const regre = function(cont){return cont.counter;}
     const regreCounter = maxCounter.map(regre)
     const stockAc = stock-regreCounter
-    // Mon Preci
-    const formatterPeso = new Intl.NumberFormat('es-CO', {
-        style: 'currency',
-        currency: 'COP',
-        minimumFractionDigits: 0
-    })
+    
     const [priceDicount, setPriceDicount]= useState ()
     useEffect(() => {
         setPriceDicount(price-((price*discount)/100))

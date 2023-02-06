@@ -1,14 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { CarContext } from '../../../../context/CarContext'
 import { ButtonLike } from '../../atoms/ButtoLike/ButtonLike'
 import'./ContainerItenProduct.scss'
 
 const ContainerItenProduct = ( {name, image, category, price, id, discount }) => {
-    const formatterPeso = new Intl.NumberFormat('es-CO', {
-        style: 'currency',
-        currency: 'COP',
-        minimumFractionDigits: 0
-    })
+    const{ formatterPeso} = useContext (CarContext)
     const [priceDicount , setPriceDicount] = useState ()
     useEffect(() => {
         setPriceDicount(price-((price*discount)/100))

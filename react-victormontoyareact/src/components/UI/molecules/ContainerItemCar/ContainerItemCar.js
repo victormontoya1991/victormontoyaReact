@@ -5,12 +5,7 @@ import { CarContext } from "../../../../context/CarContext";
 import { ButtonDelete } from "../../atoms/ButtoDelete/ButtonDelete";
 
 const ContainerItemCar = ({id, name, image, price, counter, discount}) => {
-    const{ deleteCar} = useContext (CarContext)
-    const formatterPeso = new Intl.NumberFormat('es-CO', {
-        style: 'currency',
-        currency: 'COP',
-        minimumFractionDigits: 0
-    })
+    const{deleteCar, formatterPeso} = useContext (CarContext)
     const [priceDicount , setPriceDicount] = useState ()
     const [dicount, setDicount] = useState ()
     useEffect(() => {
@@ -31,7 +26,7 @@ const ContainerItemCar = ({id, name, image, price, counter, discount}) => {
                 <p className='DateCar2'>C/U:{formatterPeso.format(price)}</p>
                 <section className='Total'>
                     <div className='OrdTotal'>
-                        <p className='TitleT'>Total: </p>
+                        <p className='TitleT'>Total:</p>
                         {
                             discount
                                 ?<h5>{formatterPeso.format(counter * priceDicount)}</h5>
