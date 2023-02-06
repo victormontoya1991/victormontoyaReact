@@ -42,8 +42,11 @@ export const CarProvider = ({children}) =>{
     },[car])
 
     // Total Car
-    const totalCar = ()=>{
-        return mycar.reduce((acc, itemCar)=> acc + itemCar.price * itemCar.counter, 0 )
+    const totalCar = (discount)=>{
+        const prec = discount
+                        ?mycar.reduce((acc, itemCar)=> acc + itemCar.price * itemCar.counter, 0 )
+                        :mycar.reduce((acc, itemCar)=> acc + itemCar.price * itemCar.counter, 0 )
+        return prec
     }
 
     return ( 

@@ -20,7 +20,8 @@ const ContainerDetail = ({id, name, image, description, price, category, stock, 
             image,
             description,
             price,
-            counter
+            counter,
+            discount
         }
         addCar (itemCar)
     }
