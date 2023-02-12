@@ -8,21 +8,28 @@ header{
         display: grid;
         padding: 10px 50px;
         justify-content: space-between;
-        grid-template-columns: 15% 70% 15%;
+        grid-template-columns: 20% 60% 20%;
         grid-template-rows: repeat(2,1fr);
         align-items: center;
         grid-template-areas: 
-            "logoBrand callHome CarWidget"
+            "logoBrand callHome ContainerIcon"
             "SearchWindow SearchWindow SearchWindow";
         @extend %glass;
+        .ContainerIcon{
+            display: flex;
+            grid-area: ContainerIcon;
+            justify-content: flex-end;
+            grid-gap: 15px;
+        }
     }
 }
 @media screen and (max-width: 850px){
     header{
         .pageHeader{
+            grid-template-columns: 30% 40% 30%;
             padding: 10px 5%;
             grid-template-areas: 
-            "hamburguesaMenu logoBrand CarWidget"
+            "hamburguesaMenu logoBrand ContainerIcon"
             "SearchWindow SearchWindow SearchWindow";
             .callHome{
                 display: none;

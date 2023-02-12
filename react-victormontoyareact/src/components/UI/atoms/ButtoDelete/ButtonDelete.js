@@ -1,9 +1,10 @@
 import './ButtonDelete.scss';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 export const ButtonDelete = ({delet, id}) => {
     return (
         <button className='IconDelete' onClick={()=>delet(id)}>
-            <span className="material-icons md-50 delete">delete</span>
+            <DeleteIcon className='delete' />
         </button>
     )
 }

@@ -19,3 +19,56 @@
         }
     }
 }
+
+.item{
+    display: flex;
+    text-decoration: none;
+    font-family: $font;
+    color: $color1;
+    font-size: $fontSize ;
+    font-weight:300;
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: auto;
+    @extend %transition1;
+    &:hover{
+        @extend %transition1;
+        color: $color3;
+    }
+    .title{
+        width: 100px;
+        display: flex;
+        grid-gap: 5px;
+        p{
+            font-size: $fontSize ;
+            font-weight:300;
+            padding: 0;
+            margin: 0;
+        }
+        h3{
+            font-size: $fontSize ;
+            font-weight:300;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    .subItem{
+        border-radius: 25px;
+        width: 100px;
+        margin-top: 40px;
+        position:fixed;
+        display: grid;
+        grid-gap: 10px;
+        @extend %glass;
+        padding: 20px;
+        a{
+            color: $color1;
+            text-decoration: none;
+            &:hover{
+                @extend %transition1;
+                color: $color3;
+            }
+        }
+    }
+}

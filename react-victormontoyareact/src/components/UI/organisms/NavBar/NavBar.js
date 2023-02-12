@@ -13,7 +13,9 @@ export const NavBar = () => {
                 <MenuBurguer />
                 <LogoBrand />
                 <MenuBar />
-                <CarWidget />
+                <div className='ContainerIcon'>
+                    <CarWidget />
+                </div>
                 <SearchWindow />
             </div>
         </header>
