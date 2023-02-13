@@ -14,8 +14,8 @@ export const MenuBar = () => {
         }
     };
     return(
-        <nav className="callHome">
-            <Link to="/" onClick={() => handleClick("subMenu")}>Home</Link>
+        <nav className="menuBar">
+            <Link className='title1' to="/" onClick={() => handleClick("subMenu")}>Home</Link>
             <button className='item' onClick={() => handleClick("subMenu1")}>
                 <ul className='title'><p>Store</p>
                 <KeyboardArrowDownIcon />
@@ -29,7 +29,8 @@ export const MenuBar = () => {
                     </ul>
                 )}
             </button>
-            <Link to="/contact" onClick={() => handleClick("subMenu")}>Contacto</Link>
+            <Link className='title1' to="/sale" onClick={() => handleClick("subMenu")}>Sale</Link>
+            <Link className='title1' to="/contact" onClick={() => handleClick("subMenu")}>Contacto</Link>
         </nav>
     )
 }

@@ -1,11 +1,14 @@
 @import "../../../../constant.scss";
 
-.callHome{
+.menuBar{
     display: flex;
-    grid-gap: 30px;
+    grid-gap: 10px;
     justify-content: center;
     align-items: center;
-    a{
+    .title1{
+        padding: 0 30px;
+        display: flex;
+        justify-content: center;
         text-decoration: none;
         font-family: $font;
         color: $color1;
@@ -19,6 +22,31 @@
         }
     }
 }
+
+.title{
+    width: 75px;
+    display: flex;
+    grid-gap: 5px;
+    justify-content: center;
+    text-decoration: none;
+    font-family: $font;
+    color: $color1;
+    font-size: $fontSize ;
+    font-weight:300;
+    &:hover{
+        font-size: $fontSizeH;
+        color: $color3;
+        text-shadow: $hover;
+        @extend %transition1
+    }
+    p{
+        font-size: $fontSize ;
+        font-weight:300;
+        padding: 0;
+        margin: 0;
+    }
+}
+
 
 .item{
     display: flex;
@@ -35,27 +63,14 @@
     &:hover{
         @extend %transition1;
         color: $color3;
+        border: none;
     }
-    .title{
-        width: 100px;
-        display: flex;
-        grid-gap: 5px;
-        p{
-            font-size: $fontSize ;
-            font-weight:300;
-            padding: 0;
-            margin: 0;
-        }
-        h3{
-            font-size: $fontSize ;
-            font-weight:300;
-            padding: 0;
-            margin: 0;
-        }
+    svg{
+        margin-right: 20px;
     }
     .subItem{
         border-radius: 25px;
-        width: 100px;
+        width:80px;
         margin-top: 40px;
         position:fixed;
         display: grid;
@@ -70,5 +85,11 @@
                 color: $color3;
             }
         }
+    }
+}
+
+@media screen and (max-width: 950px){
+    .menuBar{
+        display: none;
     }
 }

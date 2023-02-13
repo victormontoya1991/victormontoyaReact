@@ -30,7 +30,6 @@ const ContainerDetail = ({id, name, image, description, price, category, stock, 
     const regre = function(cont){return cont.counter;}
     const regreCounter = maxCounter.map(regre)
     const stockAc = stock-regreCounter
-    
     const [priceDicount, setPriceDicount]= useState ()
     useEffect(() => {
         setPriceDicount(price-((price*discount)/100))

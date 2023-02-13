@@ -20,12 +20,6 @@
             @extend %glassH;
             background: #a9ff38;
         }
-        // &:active{
-        //     color: $color2 ;
-        //     @extend %transition1;
-        //     @extend %glassH;
-        //     background: #a9ff38;
-        // }
     }
     .WindonsMenu{
         margin: -40px -10px;
@@ -55,8 +49,11 @@
 }
 
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 950px){
     .HamburguesaMenu{
         display: flex;
+        .material-icons{
+            padding: 10px;
+        }
     }
 }

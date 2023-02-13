@@ -40,3 +40,20 @@
         }
     }
 }
+
+@media all and (max-width:800px){
+    .iconCar{
+        .numbCar{
+            height: 16px;
+            width: 16px;
+            p{
+                font-size: 8px;
+            }
+        }
+        .material-icons{
+            font-size: 22;
+            padding: 10px;
+            border-radius:40%;
+        }
+    }
+}
