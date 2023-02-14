@@ -1,9 +1,10 @@
-// import SliderProduct from "../../UI/organisms/SliderProduct/SliderProduct";
+import './Home.scss'
+import Responsive from "../../UI/organisms/SliderProduct/SliderProduct"
 
 const Home = () => {
     return ( 
-        <div>
-            {/* <SliderProduct /> */}
+        <div className="MainHome" >
+            <Responsive />
         </div>
     );
 }

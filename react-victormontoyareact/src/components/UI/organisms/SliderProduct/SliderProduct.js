@@ -5,9 +5,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default class SliderProduct extends Component {
+export default class Responsive extends Component {
     render() {
-        var settings = {
+        const settings = {
             dots: true,
             infinite: false,
             speed: 500,
@@ -42,7 +42,7 @@ export default class SliderProduct extends Component {
         ]
         };
         return (
-        <div>
+        <div className='CarrucelProduc'>
             <Slider {...settings}>
             <div>
                 <h3>1</h3>
@@ -85,4 +85,3 @@ export default class SliderProduct extends Component {
         );
     }
 }
-
