@@ -1,0 +1,88 @@
+@import '../../../../constant.scss';
+
+.Footer{
+    @extend %glassO;
+    background: rgba(0, 0, 0, 0.221);
+    .ContainerFooter{
+        display: grid;
+        grid-template-columns: 25% 15% 20% 40%;
+        padding: 50px 50px;
+        color: $color5;
+        font-size:13px;
+        text-align: justify;
+        h3{
+            color: $color3;
+            font-size:16px;
+        }
+        .NavFooter{
+            display: flex;
+            flex-direction: column;
+            a{
+                font-size:13px;
+                text-decoration: none;
+                color: $color5;
+                &:hover{
+                    color: $color1;
+                    @extend %transition1;
+                }
+            }
+        }
+        .ContactoFooter{
+            p{
+                margin: 0;
+                padding: 0;
+                a{
+                    color: $color5;
+                    &:hover{
+                        color: $color1;
+                        @extend %transition1;
+                    }
+                }
+            }
+        }
+    }
+    .ContainerCopy{
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 5px 50px;
+        font-size:12px;
+        color: $color7;
+        @extend %glassO;
+        background: rgba(54, 54, 54, 0.03);
+    }
+}
+
+@media screen and (max-width: 1600px){
+    .Footer{
+        .ContainerFooter{
+            grid-template-columns: 15% 15% 25% 40%;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .Footer{
+        .ContainerFooter{
+            grid-template-columns: 0 20% 35% 45%;
+        }
+    }
+}
+
+@media screen and (max-width: 890px){
+    .Footer{
+        .ContainerFooter{
+            grid-template-columns: 0% 40% 60%;
+            padding: 30px 40px;
+            .Abaut{
+                display: none;
+            }
+            .ContaContact{
+                text-align: end;
+            }
+        }
+        .ContainerCopy{
+            padding: 5px 40px;
+        }
+    }
+}

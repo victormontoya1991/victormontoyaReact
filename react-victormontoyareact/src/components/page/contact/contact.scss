@@ -3,8 +3,8 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    background: $color1;
     padding-top: 250px;
+    min-height: 65vh;
     .contact{
         color: $color2;
         input{

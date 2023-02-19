@@ -1,0 +1,10 @@
+@import '../../../../constant.scss';
+
+.ContainerCategory{
+    .ContainerItemCate{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        cursor: pointer;
+        grid-gap: 30px;
+    }
+}
