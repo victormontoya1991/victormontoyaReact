@@ -86,3 +86,22 @@
         }
     }
 }
+
+@media screen and (max-width: 540px){
+    .Footer{
+        .ContainerFooter{
+            grid-template-columns:100%;
+            justify-items: center;
+            .ContaContact{
+                text-align: center;
+            }
+            .NavFooter{
+                align-items: center;
+            }
+        }
+        h3{
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

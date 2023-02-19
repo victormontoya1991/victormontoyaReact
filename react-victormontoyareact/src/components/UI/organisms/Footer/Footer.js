@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 import NavFooter from '../../atoms/NavFooter/NavFooter';
 import ContFooter from '../../atoms/ContFooter/ContFooter';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import './Footer.scss'
-// Importacion de data
 
 export const Foooter = () => {
-    
     const [windowSize, setWindowSize] = useState([
         window.innerWidth,
         window.innerHeight,
@@ -34,8 +33,9 @@ export const Foooter = () => {
                 {
                     540 >= windowSize[0]
                         ?<section>
-                            <h3 onClick={() => handleClick("Category")} >Categorias</h3>
-                            {showSubMenu === "Category" && (
+                            <h3 onClick={() => handleClick("Contact")}>
+                            Categorias <KeyboardArrowDownIcon /></h3>
+                            {showSubMenu === "Contact" && (
                             <NavFooter />
                             )}
                         </section>
@@ -46,7 +46,13 @@ export const Foooter = () => {
                 }
                 {
                     540 >= windowSize[0]
-                    ?<section></section>
+                    ?<section className='ContaContact'>
+                        <h3 onClick={() => handleClick("Category")}>
+                        Contacto <KeyboardArrowDownIcon /></h3>
+                        {showSubMenu === "Category" && (
+                        <ContFooter />
+                        )}
+                    </section>
                     :<section className='ContaContact'>
                         <h3>Contacto</h3>
                         <ContFooter />
