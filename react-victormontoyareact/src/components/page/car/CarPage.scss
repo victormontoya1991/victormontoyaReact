@@ -5,7 +5,8 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: auto;
-    padding: 250px 10%; 
+    padding: 150px 10%; 
+    min-height: 85vh;
     .TitleCar{
         padding-top: 250px;
         height: 100px;
@@ -18,6 +19,6 @@
 
 @media all and (max-width:900px){
     .CarPage{
-        padding: 220px 10% 50px;
+        padding: 120px 10% 50px;
     }
 }

@@ -6,7 +6,7 @@
     grid-template-areas: auto;
     margin-bottom: 20px;
     grid-gap: 50px;
-    padding: 300px 5%;
+    padding: 150px 5%;
     color: $color1;
     justify-items: center;
     @extend %transition1;
@@ -19,7 +19,7 @@
     .PageListProducts{
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 40px;
-        padding: 250px 5%;
+        padding: 150px 5%;
     }
 }
 
@@ -27,6 +27,6 @@
     .PageListProducts{
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
-        padding: 230px 5%;
+        padding: 130px 5%;
     }
 }

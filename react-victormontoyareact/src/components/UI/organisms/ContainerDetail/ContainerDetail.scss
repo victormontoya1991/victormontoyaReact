@@ -5,7 +5,7 @@
     grid-template-columns: repeat(2,1fr);
     margin-bottom: 20px;
     grid-gap: 50px;
-    padding: 250px 10%;
+    padding: 150px 10%;
     max-width: 1300px;
     color: $color1;
     grid-template-areas: 
@@ -141,7 +141,7 @@
 /*------------------------------------------------*/
 @media all and (max-width:1300px){
     .ContainerProduct{
-        padding: 250px 5%;
+        padding: 150px 5%;
     }
 }
 @media all and (max-width:1200px){
@@ -166,7 +166,7 @@
 }
 @media all and (max-width:600px){
     .ContainerProduct{
-        padding: 230px 5%;
+        padding: 130px 5%;
         grid-gap: 10px;
         .ContectsProduct{ 
             grid-gap: 0px;

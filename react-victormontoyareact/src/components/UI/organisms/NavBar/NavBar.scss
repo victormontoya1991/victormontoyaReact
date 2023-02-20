@@ -9,11 +9,10 @@ header{
         padding: 10px 50px;
         justify-content: space-between;
         grid-template-columns: 20% 60% 20%;
-        grid-template-rows: repeat(2,1fr);
+        grid-template-rows: 1fr;
         align-items: center;
         grid-template-areas: 
-            "logoBrand callHome ContainerIcon"
-            "SearchWindow SearchWindow SearchWindow";
+            "logoBrand callHome ContainerIcon";
         @extend %glass;
         .ContainerIcon{
             display: flex;
@@ -29,8 +28,7 @@ header{
             grid-template-columns: 35% 30% 35%;
             padding: 10px 5%;
             grid-template-areas: 
-            "hamburguesaMenu logoBrand ContainerIcon"
-            "SearchWindow SearchWindow SearchWindow";
+            "hamburguesaMenu logoBrand ContainerIcon";
             .callHome{
                 display: none;
             }
