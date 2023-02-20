@@ -16,8 +16,17 @@ export const LoginProvider = ({ children }) => {
         erro: null
     })
     const login = (values) => {
-        const match = MOCK_USERS.find(user =>user.email === values.email && user.password === values.password)
-        if(match) {
+        const match = MOCK_USERS.find(user =>user.email === values.email)
+        if (!match) {
+            SetUser({
+                email: null,
+                logged: false,
+                error: 'Este usuario no esta registrado'
+            })
+            return
+        }
+
+        if(match.password === values.password) {
             SetUser({
                 email: match.email,
                 logged: true,
@@ -27,7 +36,7 @@ export const LoginProvider = ({ children }) => {
             SetUser({
                 email: null,
                 logged: false,
-                error: 'Datos invalidos'
+                error: 'Clave invalidad'
             })
         }
     }
