@@ -2,9 +2,28 @@ import Slider from "react-slick";
 import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react'
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../../../../firebase/config'
+import ItemSlider from '../../molecules/ItemSliders/ItemSliders'
 
 const ContainerSlider = () => {
+    const [slider, setSlider] = useState ([])
+    useEffect(()=>{
+        //Ref Colection
+        const categoryRef = collection(db, "data_slider")
+        //Peticion
+        getDocs(categoryRef)
+            .then((res) => {
+                setSlider(res.docs.map((doc)=> {
+                    return {
+                        ...doc.data(),
+                        id:doc.id
+                    }
+                }).slice(0, 4))
+            })
+    },[])
+
     const settings = {
         dots: true,
         infinite: true,
@@ -12,16 +31,10 @@ const ContainerSlider = () => {
         slidesToShow: 1,
         slidesToScroll: 1
     };
-
     return (
-        <div>
+        <div className='ContainerSlider'>
             <Slider {...settings}>
-                <Link to="/sale" >
-                    <img alt="Sale" src="https://firebasestorage.googleapis.com/v0/b/victor-montoya-rj.appspot.com/o/banners%2F112.png?alt=media&token=90b473d8-e933-4982-991d-ff504ecb015c" />
-                </Link>
-                <Link to="/category/Cascos">
-                <img alt="Sale" src="https://firebasestorage.googleapis.com/v0/b/victor-montoya-rj.appspot.com/o/banners%2F111.png?alt=media&token=b0317e6f-2efb-494a-8b41-62ccb9930243" />
-                </Link>
+                {slider.map ((slid) => <ItemSlider key={slid.id} {...slid}/>)}
             </Slider>
         </div>
     );
