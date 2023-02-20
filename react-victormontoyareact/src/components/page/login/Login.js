@@ -1,41 +1,42 @@
 import './Login.scss'
 import React, { useState } from 'react';
-import firebase from 'firebase';
+import { useLoginContext } from '../../../context/LoginContext';
 
 const Login = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const {login}= useLoginContext()
 
-    const handleLogin = (e) => {
-        e.preventDefault();
-        firebase
-        .auth()
-        .signInWithEmailAndPassword(email, password)
-        .then((user) => {
-            console.log(user);
+    const [values, setValues] = useState({
+        email: '',
+        password: ''
+    })
+
+    const handleInputChange =(e)=>{
+        setValues({
+            ...values,
+            [e.target.name]: e.target.value
         })
-        .catch((error) => {
-            console.error(error);
-        });
-    };
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        login (values)
+    }
 
     return (
-        <form onSubmit={handleLogin} className="ContainerLogin">
-        <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-        />
-        <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-        />
-        <button type="submit">Login</button>
+        <form className="ContainerLogin" onSubmit={handleSubmit}> 
+            <input
+                type="email"
+                placeholder="Email"
+                value={values.email}
+                onChange={handleInputChange}
+                name="email"
+            />
+            <input
+                type="password"
+                value={values.password}
+                onChange={handleInputChange}
+                name="password"
+            />
+            <button type="submit">Login</button>
         </form>
     );
 };

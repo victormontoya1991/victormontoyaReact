@@ -20,10 +20,6 @@ const ContainerCategory = () => {
                 }).slice(0, 4))
             })
     },[])
-
-    console.log(category)
-
-
     return (
         <div className='ContainerCategory'>
             <section>
