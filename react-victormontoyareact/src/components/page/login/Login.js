@@ -37,7 +37,10 @@ const Login = () => {
                 name="password"
             />
             <button type="submit">Login</button>
-            {user.error && <p className='Alert'>{user.error}</p>}
+            {user.error && <p className='Alert Error'>
+                <span className="material-icons md-70">info_outline</span>
+                {user.error}
+            </p>}
         </form>
     );
 };
