@@ -1,4 +1,28 @@
 .CarrucelProduc{
     max-width: 100%;
-    min-height: 500px;
+    margin: 100px 0px;
+    h2{
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    .ContainerItenProduct{
+        margin-top: 30px;
+        margin-left: 40px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .CarrucelProduc{
+        margin: 50px 0px;
+        h2{
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+        .ContainerItenProduct{
+            margin-top: 25px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+    }
 }
