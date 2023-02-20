@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useLoginContext } from '../../../context/LoginContext';
 
 const Login = () => {
-    const {login}= useLoginContext()
+    const {login, user}= useLoginContext()
 
     const [values, setValues] = useState({
         email: '',
@@ -37,6 +37,7 @@ const Login = () => {
                 name="password"
             />
             <button type="submit">Login</button>
+            {user.error && <p className='Alert'>{user.error}</p>}
         </form>
     );
 };
