@@ -4,6 +4,7 @@ import { EmptyCar } from '../../UI/molecules/EmptyCar/EmptyCar';
 import ContainerItemCar from '../../UI/molecules/ContainerItemCar/ContainerItemCar';
 import './CarPage.scss'
 import { WindonTotal } from '../../UI/atoms/WindonTotal/WindonTotal';
+import { Link } from 'react-router-dom';
 
 const CarPage = () => {
     const {mycar, totalCar, discountCar, emptyCar, formatterPeso } = useContext( CarContext )
@@ -23,6 +24,9 @@ const CarPage = () => {
                                 discountCar={discountCar}
                                 formatterPeso={formatterPeso}
                                 />
+                    </section>
+                    <section>
+                        <Link to="/checkaut">Finalizar Compra</Link>
                     </section>
                 </div>
             }

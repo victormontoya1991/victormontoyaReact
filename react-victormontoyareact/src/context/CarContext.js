@@ -1,6 +1,10 @@
-import { createContext, useEffect, useState} from "react";
+import { createContext, useContext ,useEffect , useState} from "react";
 
 export const CarContext = createContext ()
+
+export const useCarContext = () => {
+    return useContext (CarContext)
+}
 const init = JSON.parse(localStorage.getItem('car'))|| []
 export const CarProvider = ({children}) =>{
     const [car,setCar] = useState([...init])
