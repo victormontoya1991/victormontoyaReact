@@ -1,10 +1,10 @@
-
+import './Register.scss'
 
 const Register= () => {
 
 
     return (
-        <div>
+        <div className="ContainerRegister">
 
         </div>
     )

@@ -1,3 +1,4 @@
+import './Login.scss'
 import React, { useState } from 'react';
 import firebase from 'firebase';
 
@@ -19,7 +20,7 @@ const Login = () => {
     };
 
     return (
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleLogin} className="ContainerLogin">
         <input
             type="email"
             placeholder="Email"
