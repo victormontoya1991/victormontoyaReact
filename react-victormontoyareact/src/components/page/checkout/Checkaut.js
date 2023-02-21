@@ -9,7 +9,6 @@ import { collection, addDoc, documentId, writeBatch, where, query, getDocs } fro
 const User = () => {
     const {mycar, totalCar, formatterPeso, discountCar, emptyCar} = useCarContext()
     const [ordenId, setOrdenId] = useState(null)
-    console.log(ordenId)
     const[values, setValues] = useState({
         name: '',
         andress: '',
@@ -22,26 +21,48 @@ const User = () => {
             [e.target.name]: e.target.value
         })
     }
+    const [errorMessages, setErrorMessages] = useState({
+        name: '',
+        address: '',
+        phone: '',
+        email: ''
+    });
     const hadleSubmit = async (e) =>{
         e.preventDefault()
         let isFormValid = true;
         //Validacion datos
         if(values.name.length < 3){
-            alert("Nombre inválido")
+            setErrorMessages(prevState => ({
+                ...prevState,
+                name: "Nombre inválido"
+            }));
             isFormValid = false;
+            return;
         }
         if (values.andress.length < 10) {
-            alert('Dirección inválida. Debe tener al menos 10 caracteres.');
+            setErrorMessages(prevState => ({
+                ...prevState,
+                address: 'Dirección inválida. Debe tener al menos 10 caracteres.'
+            }));
             isFormValid = false;
+            return;
         }
         if (!/^\d{10}$/.test(values.phone)){
-            alert('Teléfono inválido. Debe tener 10 dígitos numéricos.');
+            setErrorMessages(prevState => ({
+                ...prevState,
+                phone: 'Teléfono inválido. Debe tener 10 dígitos numéricos.'
+            }));
             isFormValid = false;
+            return;
         }
         // eslint-disable-next-line no-useless-escape
         if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(values.email)){
-            alert('Correo electrónico inválido.');
+            setErrorMessages(prevState => ({
+                ...prevState,
+                email: 'Correo electrónico inválido.'
+            }));
             isFormValid = false;
+            return;
         }
         if (isFormValid) {
             //Modelado de la orden
@@ -114,6 +135,7 @@ const User = () => {
                     value={values.name}
                     placeholder='Nombre'
                 />
+                {errorMessages.name && <p className="error-message">{errorMessages.name}</p>}
                 <input
                     onChange={handleInputChange}
                     type='text'
@@ -121,6 +143,7 @@ const User = () => {
                     value={values.andress}
                     placeholder='Dirección'
                 />
+                {errorMessages.address && <p className="error-message">{errorMessages.address}</p>}
                 <input
                     onChange={handleInputChange}
                     type='numb'
@@ -128,6 +151,7 @@ const User = () => {
                     value={values.phone}
                     placeholder='Telefono'
                 />
+                {errorMessages.phone && <p className="error-message">{errorMessages.phone}</p>}
                 <input
                     onChange={handleInputChange}
                     type='email'
@@ -135,6 +159,7 @@ const User = () => {
                     value={values.email}
                     placeholder='Email'
                 />
+                {errorMessages.email && <p className="error-message">{errorMessages.email}</p>}
                 <p>Realiza tus pedidos y pagalos en casa.</p>
                 <button className='ButtonForm' >Pago Contra Entrega <ArrowForwardIcon /></button>
             </form>
