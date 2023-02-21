@@ -101,6 +101,11 @@ const User = () => {
     return (
         <div className='ContainerCheckaut'>
             <h2>Finalizar Compra</h2>
+            <div className='ContainerTotal'>
+                <p className='Mont'> Monto: {formatterPeso.format(totalCar())}</p>
+                <p className='Disc'> Ahorro: {formatterPeso.format(-discountCar())}</p>
+                <h3> Total: {formatterPeso.format(totalCar()-discountCar())}</h3>
+            </div>
             <form onSubmit={hadleSubmit} className='DatesCheckaut'>
                 <input
                     onChange={handleInputChange}

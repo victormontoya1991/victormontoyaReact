@@ -8,6 +8,29 @@
         text-align: center;
         margin-bottom: 10px;
     }
+    .ContainerTotal{
+        display: grid;
+        p{
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h3{
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            margin-bottom: 20px;
+            color: $color7;
+        }
+        .Mont{
+            color: $color5;
+        }
+        .Disc{
+            color: $color4;
+        }
+    }
     .DatesCheckaut{
         display: grid;
         justify-items: center;
