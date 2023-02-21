@@ -21,7 +21,6 @@ export  const ButtonUser  = () => {
             <PersonIcon className="material-icons" />
             {showSubMenu === 'subUser' && (
                 <ul className='subItem'>
-                    <button> <FavoriteIcon />List Love</button>
                     <button onClick={logout}> <LogoutIcon />Logout</button>
                 </ul>
             )}

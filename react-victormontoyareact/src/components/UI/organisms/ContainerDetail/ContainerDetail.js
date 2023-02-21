@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { useContext, useEffect, useState } from 'react'
 import { ButtonReturn } from '../../atoms/ButtonReturn/ButtonReturn'
 import { ButtonQuantity } from '../../atoms/ButtonQuantity/ButtonQuantity'
-import { ButtonLike } from '../../atoms/ButtoLike/ButtonLike'
 import { CarContext } from '../../../../context/CarContext'
 
 const ContainerDetail = ({id, name, image, description, price, category, stock, discount}) => {
@@ -42,7 +41,6 @@ const ContainerDetail = ({id, name, image, description, price, category, stock, 
                 <ButtonReturn />
             </section>
             <section className='PintureProduct'>
-                <ButtonLike />
                 <article className='PintureImg'>
                     <img alt="{name}" src={image}/>
                 </article>

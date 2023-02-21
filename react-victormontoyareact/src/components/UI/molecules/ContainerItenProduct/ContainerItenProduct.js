@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CarContext } from '../../../../context/CarContext'
-import { ButtonLike } from '../../atoms/ButtoLike/ButtonLike'
 import'./ContainerItenProduct.scss'
 
 const ContainerItenProduct = ( {name, image, category, price, id, discount }) => {
@@ -13,7 +12,6 @@ const ContainerItenProduct = ( {name, image, category, price, id, discount }) =>
     return(
         <div className='ContainerItenProduct'>
             <section className='ContainerImg'>
-                <ButtonLike />
                 <Link className='ImgItenProduct' to={`/products/${id}`}>
                     <img className='ImgProuc' alt="{name}" src={image} />
                 </Link>
