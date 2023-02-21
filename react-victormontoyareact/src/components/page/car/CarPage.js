@@ -2,9 +2,10 @@ import { useContext } from 'react';
 import { CarContext } from '../../../context/CarContext';
 import { EmptyCar } from '../../UI/molecules/EmptyCar/EmptyCar';
 import ContainerItemCar from '../../UI/molecules/ContainerItemCar/ContainerItemCar';
-import './CarPage.scss'
 import { WindonTotal } from '../../UI/atoms/WindonTotal/WindonTotal';
-import { Link } from 'react-router-dom';
+import './CarPage.scss'
+import ButtonEnd from '../../UI/atoms/ButtonEnd/ButtoEnd';
+
 
 const CarPage = () => {
     const {mycar, totalCar, discountCar, emptyCar, formatterPeso } = useContext( CarContext )
@@ -25,8 +26,8 @@ const CarPage = () => {
                                 formatterPeso={formatterPeso}
                                 />
                     </section>
-                    <section>
-                        <Link to="/checkaut">Finalizar Compra</Link>
+                    <section className='ContainerButton'>
+                        <ButtonEnd />
                     </section>
                 </div>
             }

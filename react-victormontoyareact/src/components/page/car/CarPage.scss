@@ -6,7 +6,7 @@
     grid-template-columns: 1fr;
     grid-template-areas: auto;
     padding: 150px 10%; 
-    min-height: 85vh;
+    min-height: 60vh;
     .TitleCar{
         padding-top: 250px;
         height: 100px;
@@ -14,6 +14,11 @@
     }
     .ListProduct{
         display: grid;
+    }
+    .ContainerButton{
+        display: grid;
+        justify-content: center;
+        align-items: center;
     }
 }
 
