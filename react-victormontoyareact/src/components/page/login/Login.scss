@@ -1,12 +1,56 @@
+@import '../../../constant.scss';
+
 .ContainerLogin{
     display: grid;
     min-height: 85vh;
     justify-content: center;
     align-items: center;
     align-content: center;
+    justify-items: center;
     grid-gap: 30px;
-    input{
-        font-size: 18px;
-        padding: 10px;
+    img{
+        width: 250px;
+    }
+    form{
+        display: grid;
+        justify-items: center;
+        align-items: start;
+        grid-gap: 20px;
+        input{
+            min-width: 300px;
+            font-size: $fontSize;
+            padding: 10px 15px;
+            border-radius: 14px;
+            background: #46464665;
+            color: $color1;
+        }
+        .ButtonForm{
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 18px;
+            display: flex;
+            grid-gap: 5px;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: $color3;
+            border-radius: 20px;
+            color: $color2;
+            font-weight: 700;
+            @extend %transition1;
+            cursor: pointer;
+            &:hover{
+                font-size: 19px;
+                grid-gap: 10px;
+                padding: 9px 50px;
+                @extend %transition1;
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+        color: $color3;
+        &:hover{
+            color: $color1;
+        }
     }
 }

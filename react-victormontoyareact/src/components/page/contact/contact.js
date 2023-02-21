@@ -1,11 +1,13 @@
 import { useState } from 'react'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import './contact.scss'
 
 const PageContact = () => {
     const [values, setValues] = useState({
         firstname :'',
         email:'',
-        phone:''
+        phone:'',
+        messenger: ''
     })
     const handleInputChage = (e) =>{
         setValues({
@@ -19,6 +21,7 @@ const PageContact = () => {
     }
     return(
         <div className="MainContact">
+            <h2> Contacto de Soporte</h2>
             <form className="contact" onSubmit={handleSubmit} >
                 <input 
                     onChange={handleInputChage}
@@ -27,22 +30,29 @@ const PageContact = () => {
                     type="text" 
                     placeholder="Nombre"
                     className='ImputClass'
-                    /> <hr/>
+                    />
                 <input 
                     onChange={handleInputChage}
                     value={values.email}
                     name='email'
                     type="email" 
                     placeholder="Email"
-                    /> <hr/>
+                    />
                 <input 
                     onChange={handleInputChage}
                     value={values.phone}
                     name='phone'
                     type="phone" 
                     placeholder="Telefono"
-                    /> <hr/>
-                <button>Enviar</button>
+                    />
+                <input 
+                    onChange={handleInputChage}
+                    value={values.messenger}
+                    name='messenger'
+                    type="text" 
+                    placeholder="Mensaje"
+                    />
+                <button className='ButtonForm' >Enviar <ArrowForwardIcon /> </button>
             </form>
         </div>
     )

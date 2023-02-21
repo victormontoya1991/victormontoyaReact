@@ -1,12 +1,14 @@
-.ContainerRegister{
+@import '../../../constant.scss';
+
+
+.ContainerLogin{
     display: grid;
     min-height: 85vh;
     justify-content: center;
     align-items: center;
     align-content: center;
     grid-gap: 30px;
-    input{
-        font-size: 18px;
-        padding: 10px;
+    h2{
+        color: $color7;
     }
 }

@@ -2,6 +2,7 @@ import './Register.scss'
 import React, { useState } from 'react';
 import { useLoginContext } from '../../../context/LoginContext';
 import { Link } from 'react-router-dom';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const Register = () => {
     const { user, register }= useLoginContext()
@@ -21,6 +22,7 @@ const Register = () => {
     }
     return (
         <div className="ContainerLogin">
+            <img alt="Name Store" src='https://firebasestorage.googleapis.com/v0/b/victor-montoya-rj.appspot.com/o/banners%2Flogo_web.png?alt=media&token=6ee5c77d-6d84-4744-bb1b-83aca4642db2'/>
             <h2> Registro de usuarios</h2>
             <form  onSubmit={handleSubmit}> 
                 <input
@@ -36,7 +38,7 @@ const Register = () => {
                     onChange={handleInputChange}
                     name="password"
                 />
-                <button type="submit">Login</button>
+                <button  className='ButtonForm'  type="submit">Registrar <ArrowForwardIcon /></button>
                 {user.error && <p className='Alert Error'>
                     <span className="material-icons md-70">info_outline</span>
                     {user.error}

@@ -1,9 +1,13 @@
 @import '../../../constant.scss';
 
 .ContainerCheckaut{
-    min-height: 85vh;
+    min-height: 65vh;
     padding-top: 150px;
     color: $color1;
+    h2{
+        text-align: center;
+        margin-bottom: 10px;
+    }
     .DatesCheckaut{
         display: grid;
         justify-items: center;
@@ -14,8 +18,53 @@
             font-size: $fontSize;
             padding: 10px 15px;
             border-radius: 14px;
+            font-size: $fontSize;
             background: #46464665;
             color: $color1;
         }
+    }
+}
+
+.ButtonForm{
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    grid-gap: 5px;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: $color3;
+    border-radius: 20px;
+    color: $color2;
+    font-weight: 700;
+    @extend %transition1;
+    cursor: pointer;
+    &:hover{
+        font-size: 19px;
+        grid-gap: 10px;
+        padding: 10px 30px;
+        @extend %transition1;
+    }
+}
+
+.ContainerExit{
+    min-height: 65vh;
+    padding-top: 150px;
+    color: $color1;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    h2{
+        font-size: 25px;
+    }
+    h3{
+        color: $color7;
+        margin: 0;
+        padding: 0;
+    }
+    p{
+        font-size: 13px;
+        margin: 0;
+        padding: 0;
     }
 }

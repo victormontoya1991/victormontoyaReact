@@ -1,15 +1,48 @@
 @import '../../../constant.scss';
 .MainContact{
     display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-top: 150px;
-    min-height: 85vh;
+    min-height: 65vh;
+    h2{
+        color: $color1;
+    }
     .contact{
+        display: grid;
         color: $color2;
+        grid-gap: 20px;
         input{
+            min-width: 300px;
+            font-size: $fontSize;
             font-family: $font;
+            padding: 10px 15px;
+            border-radius: 14px;
+            background: #46464665;
+            color: $color1;
+        }
+        .ButtonForm{
+            margin-top: 20px;
+            justify-content: center;
+            text-decoration: none;
             font-size: 18px;
+            display: flex;
+            grid-gap: 5px;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: $color3;
+            border-radius: 20px;
+            color: $color2;
+            font-weight: 700;
+            @extend %transition1;
+            cursor: pointer;
+            &:hover{
+                font-size: 19px;
+                grid-gap: 10px;
+                padding: 9px 50px;
+                @extend %transition1;
+            }
         }
     }
 }

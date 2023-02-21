@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { useCarContext } from '../../../context/CarContext'
 import { db } from '../../../firebase/config'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { collection, addDoc, documentId, writeBatch, where, query, getDocs } from 'firebase/firestore'
 
 const User = () => {
@@ -47,6 +48,7 @@ const User = () => {
             const order = {
                 coustumer: values,
                 items: mycar,
+                descuento: discountCar(),
                 total: formatterPeso.format(totalCar()-discountCar())
             }
             // Llamado de stock en base de datos y data reposa la orden
@@ -84,10 +86,12 @@ const User = () => {
     }
     if(ordenId){
         return (
-            <div className="container my-5">
+            <div className="ContainerExit">
                 <h2>Tu compra ha sido exitosa</h2>
-                <p>Tu código de orden es: {ordenId}</p>
-                <Link to="/">Volver</Link>
+                <p>Tu código de orden es:</p>
+                <h3>{ordenId}</h3>
+                <p>Llegara a tu email un resumen de tu compra</p>
+                <Link className='ButtonForm' to="/">Volver <ArrowForwardIcon /></Link>
             </div>
         )
     }
@@ -126,7 +130,8 @@ const User = () => {
                     value={values.email}
                     placeholder='Email'
                 />
-                <button>Pago Contra Entrega</button>
+                <p>Realiza tus pedidos y pagalos en casa.</p>
+                <button className='ButtonForm' >Pago Contra Entrega <ArrowForwardIcon /></button>
             </form>
         </div>
     );

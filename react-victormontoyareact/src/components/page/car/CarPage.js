@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { CarContext } from '../../../context/CarContext';
 import { EmptyCar } from '../../UI/molecules/EmptyCar/EmptyCar';
-import ContainerItemCar from '../../UI/molecules/ContainerItemCar/ContainerItemCar';
 import { WindonTotal } from '../../UI/atoms/WindonTotal/WindonTotal';
+import ContainerItemCar from '../../UI/molecules/ContainerItemCar/ContainerItemCar';
 import './CarPage.scss'
 import ButtonEnd from '../../UI/atoms/ButtonEnd/ButtoEnd';
 
