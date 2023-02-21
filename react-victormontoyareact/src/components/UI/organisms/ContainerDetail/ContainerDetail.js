@@ -27,9 +27,8 @@ const ContainerDetail = ({id, name, image, description, price, category, stock, 
     }
     // Max Counter
     const maxCounter = mycar.filter(item => item.id === id);
-    const regre = function(cont){return cont.counter;}
-    const regreCounter = maxCounter.map(regre)
-    const stockAc = stock-regreCounter
+    const regreCounter = maxCounter.reduce((total, item) => total + item.counter, 0);
+    const stockAc = stock - regreCounter;
     const [priceDicount, setPriceDicount]= useState ()
     useEffect(() => {
         setPriceDicount(price-((price*discount)/100))
@@ -88,7 +87,6 @@ const ContainerDetail = ({id, name, image, description, price, category, stock, 
                                 :<div className='CarButton'>
                                     <Link className='ButtonC' to="/car"> Ir Carrito </Link>
                                 </div>
-
                         }
                     </article>
             </section>
