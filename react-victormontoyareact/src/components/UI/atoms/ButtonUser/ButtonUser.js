@@ -2,7 +2,6 @@ import PersonIcon from '@mui/icons-material/Person';
 import './ButtonUser.scss'
 import { useLoginContext } from '../../../../context/LoginContext';
 import { useState } from 'react';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import LogoutIcon from '@mui/icons-material/Logout';
 
 export  const ButtonUser  = () => {
