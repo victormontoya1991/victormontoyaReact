@@ -4,4 +4,18 @@
     min-height: 85vh;
     padding-top: 150px;
     color: $color1;
+    .DatesCheckaut{
+        display: grid;
+        justify-items: center;
+        align-items: start;
+        grid-gap: 20px;
+        input{
+            min-width: 300px;
+            font-size: $fontSize;
+            padding: 10px 15px;
+            border-radius: 14px;
+            background: #46464665;
+            color: $color1;
+        }
+    }
 }
